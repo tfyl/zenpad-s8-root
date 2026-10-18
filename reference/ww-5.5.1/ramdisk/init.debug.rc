@@ -1,0 +1,4 @@
+import init.internal_props.rc
+on init
+   symlink /data/logs /logs
+   write /proc/sys/kernel/kptr_restrict 2

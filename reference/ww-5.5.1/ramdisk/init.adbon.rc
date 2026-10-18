@@ -1,0 +1,6 @@
+
+#Enable ADB for factory test
+service enable_adb /system/bin/sh /system/bin/adbon.sh
+    class main
+    oneshot
+

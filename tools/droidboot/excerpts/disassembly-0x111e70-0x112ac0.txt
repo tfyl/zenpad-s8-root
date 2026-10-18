@@ -1,0 +1,401 @@
+===== func 0x111e70 .. 0x112ac0 =====
+F111e70: push   %ebp
+ 111e71: xor    %eax,%eax
+ 111e73: mov    $0xe,%ecx
+ 111e78: push   %edi
+ 111e79: push   %esi
+ 111e7a: push   %ebx
+ 111e7b: call   251ac <inflateReset@plt+0x85c>
+ 111e80: add    $0x9be6c,%ebx
+ 111e86: lea    -0x9c(%esp),%esp
+ 111e8d: movl   $0x0,0x34(%esp)
+ 111e95: lea    0x58(%esp),%esi
+ 111e99: mov    %esi,%edi
+ 111e9b: rep stos %eax,%es:(%edi)
+ 111e9d: movb   $0x1,0x5c(%esp)
+ 111ea2: movl   $0x2,0x60(%esp)
+ 111eaa: call   f70f0 <DX_CclibInit@@Base>
+ 111eaf: test   %eax,%eax
+ 111eb1: je     111ec0 <ifp_manuf_sts_bit_set@@Base+0x50>
+ 111eb3: lea    0x9c(%esp),%esp
+ 111eba: pop    %ebx
+ 111ebb: pop    %esi
+ 111ebc: pop    %edi
+ 111ebd: pop    %ebp
+ 111ebe: ret
+ 111ebf: nop
+ 111ec0: movl   $0x0,(%esp)
+ 111ec7: lea    0x30(%esp),%edi
+ 111ecb: mov    %edi,0x4(%esp)
+ 111ecf: call   fe850 <TEEC_InitializeContext@@Base>
+ 111ed4: test   %eax,%eax
+ 111ed6: mov    %eax,%ebp
+ 111ed8: je     111ef0 <ifp_manuf_sts_bit_set@@Base+0x80>
+ 111eda: call   f7140 <DX_CclibFini@@Base>
+ 111edf: lea    0x9c(%esp),%esp
+ 111ee6: mov    %ebp,%eax
+ 111ee8: pop    %ebx
+ 111ee9: pop    %esi
+ 111eea: pop    %edi
+ 111eeb: pop    %ebp
+ 111eec: ret
+ 111eed: lea    0x0(%esi),%esi
+ 111ef0: lea    -0x3ea7c(%ebx),%eax ; "PROVISIONING"
+ 111ef6: lea    0x34(%esp),%ecx
+ 111efa: mov    %eax,0x8(%esp)
+ 111efe: lea    0x38(%esp),%eax
+ 111f02: movl   $0x0,0x14(%esp)
+ 111f0a: movl   $0x0,0x10(%esp)
+ 111f12: movl   $0x0,0xc(%esp)
+ 111f1a: mov    %ecx,0x18(%esp)
+ 111f1e: mov    %edi,(%esp)
+ 111f21: mov    %eax,0x4(%esp)
+ 111f25: mov    %ecx,0x28(%esp)
+ 111f29: mov    %eax,0x2c(%esp)
+ 111f2d: call   fea60 <TEEC_OpenSession@@Base>
+ 111f32: test   %eax,%eax
+ 111f34: mov    %eax,%ebp
+ 111f36: mov    0x28(%esp),%ecx
+ 111f3a: jne    111f6a <ifp_manuf_sts_bit_set@@Base+0xfa>
+ 111f3c: mov    0x2c(%esp),%eax
+ 111f40: mov    %ecx,0xc(%esp)
+ 111f44: mov    %esi,0x8(%esp)
+ 111f48: movl   $0x4,0x4(%esp)
+ 111f50: mov    %eax,(%esp)
+ 111f53: call   fef40 <TEEC_InvokeCommand@@Base>
+ 111f58: test   %eax,%eax
+ 111f5a: mov    %eax,%ebp
+ 111f5c: jne    111f78 <ifp_manuf_sts_bit_set@@Base+0x108>
+ 111f5e: mov    0x2c(%esp),%eax
+ 111f62: mov    %eax,(%esp)
+ 111f65: call   fef10 <TEEC_CloseSession@@Base>
+ 111f6a: mov    %edi,(%esp)
+ 111f6d: call   fe8f0 <TEEC_FinalizeContext@@Base>
+ 111f72: jmp    111eda <ifp_manuf_sts_bit_set@@Base+0x6a>
+ 111f77: nop
+ 111f78: mov    %eax,0x8(%esp)
+ 111f7c: lea    -0x54f0c(%ebx),%eax ; "ifp_process_cmd failed. error(0x%x)"
+ 111f82: mov    %eax,0x4(%esp)
+ 111f86: mov    -0x38(%ebx),%eax
+ 111f8c: mov    (%eax),%eax
+ 111f8e: mov    %eax,(%esp)
+ 111f91: call   24470 <fprintf@plt>
+ 111f96: jmp    111f5e <ifp_manuf_sts_bit_set@@Base+0xee>
+ 111f98: nop
+ 111f99: lea    0x0(%esi,%eiz,1),%esi
+ 111fa0: push   %ebp
+ 111fa1: xor    %eax,%eax
+ 111fa3: mov    $0xe,%ecx
+ 111fa8: push   %edi
+ 111fa9: push   %esi
+ 111faa: push   %ebx
+ 111fab: call   251ac <inflateReset@plt+0x85c>
+ 111fb0: add    $0x9bd3c,%ebx
+ 111fb6: lea    -0x9c(%esp),%esp
+ 111fbd: movl   $0x0,0x34(%esp)
+ 111fc5: lea    0x58(%esp),%esi
+ 111fc9: mov    %esi,%edi
+ 111fcb: rep stos %eax,%es:(%edi)
+ 111fcd: mov    0xb0(%esp),%eax
+ 111fd4: movb   $0x1,0x5c(%esp)
+ 111fd9: mov    %eax,0x60(%esp)
+ 111fdd: call   f70f0 <DX_CclibInit@@Base>
+ 111fe2: test   %eax,%eax
+ 111fe4: je     111ff8 <ifp_consume_token@@Base+0x58>
+ 111fe6: lea    0x9c(%esp),%esp
+ 111fed: pop    %ebx
+ 111fee: pop    %esi
+ 111fef: pop    %edi
+ 111ff0: pop    %ebp
+ 111ff1: ret
+ 111ff2: lea    0x0(%esi),%esi
+ 111ff8: movl   $0x0,(%esp)
+ 111fff: lea    0x30(%esp),%edi
+ 112003: mov    %edi,0x4(%esp)
+ 112007: call   fe850 <TEEC_InitializeContext@@Base>
+ 11200c: test   %eax,%eax
+ 11200e: mov    %eax,%ebp
+ 112010: je     112028 <ifp_consume_token@@Base+0x88>
+ 112012: call   f7140 <DX_CclibFini@@Base>
+ 112017: lea    0x9c(%esp),%esp
+ 11201e: mov    %ebp,%eax
+ 112020: pop    %ebx
+ 112021: pop    %esi
+ 112022: pop    %edi
+ 112023: pop    %ebp
+ 112024: ret
+ 112025: lea    0x0(%esi),%esi
+ 112028: lea    -0x3ea7c(%ebx),%eax ; "PROVISIONING"
+ 11202e: lea    0x34(%esp),%ecx
+ 112032: mov    %eax,0x8(%esp)
+ 112036: lea    0x38(%esp),%eax
+ 11203a: movl   $0x0,0x14(%esp)
+ 112042: movl   $0x0,0x10(%esp)
+ 11204a: movl   $0x0,0xc(%esp)
+ 112052: mov    %ecx,0x18(%esp)
+ 112056: mov    %edi,(%esp)
+ 112059: mov    %eax,0x4(%esp)
+ 11205d: mov    %ecx,0x28(%esp)
+ 112061: mov    %eax,0x2c(%esp)
+ 112065: call   fea60 <TEEC_OpenSession@@Base>
+ 11206a: test   %eax,%eax
+ 11206c: mov    %eax,%ebp
+ 11206e: mov    0x28(%esp),%ecx
+ 112072: jne    1120a2 <ifp_consume_token@@Base+0x102>
+ 112074: mov    0x2c(%esp),%eax
+ 112078: mov    %ecx,0xc(%esp)
+ 11207c: mov    %esi,0x8(%esp)
+ 112080: movl   $0x5,0x4(%esp)
+ 112088: mov    %eax,(%esp)
+ 11208b: call   fef40 <TEEC_InvokeCommand@@Base>
+ 112090: test   %eax,%eax
+ 112092: mov    %eax,%ebp
+ 112094: jne    1120b0 <ifp_consume_token@@Base+0x110>
+ 112096: mov    0x2c(%esp),%eax
+ 11209a: mov    %eax,(%esp)
+ 11209d: call   fef10 <TEEC_CloseSession@@Base>
+ 1120a2: mov    %edi,(%esp)
+ 1120a5: call   fe8f0 <TEEC_FinalizeContext@@Base>
+ 1120aa: jmp    112012 <ifp_consume_token@@Base+0x72>
+ 1120af: nop
+ 1120b0: mov    %eax,0x8(%esp)
+ 1120b4: lea    -0x54f0c(%ebx),%eax ; "ifp_process_cmd failed. error(0x%x)"
+ 1120ba: mov    %eax,0x4(%esp)
+ 1120be: mov    -0x38(%ebx),%eax
+ 1120c4: mov    (%eax),%eax
+ 1120c6: mov    %eax,(%esp)
+ 1120c9: call   24470 <fprintf@plt>
+ 1120ce: jmp    112096 <ifp_consume_token@@Base+0xf6>
+ 1120d0: push   %ebp
+ 1120d1: xor    %eax,%eax
+ 1120d3: mov    $0x7,%ecx
+ 1120d8: push   %edi
+ 1120d9: push   %esi
+ 1120da: push   %ebx
+ 1120db: call   251ac <inflateReset@plt+0x85c>
+ 1120e0: add    $0x9bc0c,%ebx
+ 1120e6: lea    -0xec(%esp),%esp
+ 1120ed: lea    0x50(%esp),%edi
+ 1120f1: lea    0x50(%esp),%ebp
+ 1120f5: rep stos %eax,%es:(%edi)
+ 1120f7: lea    0x6c(%esp),%edi
+ 1120fb: mov    $0x7,%cl
+ 1120fd: rep stos %eax,%es:(%edi)
+ 1120ff: mov    0x104(%esp),%edx
+ 112106: lea    0xa8(%esp),%edi
+ 11210d: mov    0x100(%esp),%esi
+ 112114: mov    $0xe,%cl
+ 112116: movl   $0x1,0x58(%esp)
+ 11211e: mov    %edi,0x20(%esp)
+ 112122: test   %edx,%edx
+ 112124: mov    %esi,0x54(%esp)
+ 112128: lea    0x6c(%esp),%esi
+ 11212c: movl   $0x8000,0x70(%esp)
+ 112134: movl   $0x2,0x74(%esp)
+ 11213c: mov    %ebp,0x44(%esp)
+ 112140: mov    %edx,0x50(%esp)
+ 112144: movl   $0x0,0x4c(%esp)
+ 11214c: rep stos %eax,%es:(%edi)
+ 11214e: mov    %esi,0x48(%esp)
+ 112152: je     112228 <tee_token_cryptid_request@@Base+0x158>
+ 112158: mov    0x100(%esp),%ecx
+ 11215f: test   %ecx,%ecx
+ 112161: je     112228 <tee_token_cryptid_request@@Base+0x158>
+ 112167: mov    0x10c(%esp),%edx
+ 11216e: test   %edx,%edx
+ 112170: je     112228 <tee_token_cryptid_request@@Base+0x158>
+ 112176: mov    0x108(%esp),%eax
+ 11217d: test   %eax,%eax
+ 11217f: je     112228 <tee_token_cryptid_request@@Base+0x158>
+ 112185: mov    0x108(%esp),%eax
+ 11218c: movl   $0x0,(%eax)
+ 112192: movl   $0x8000,(%esp)
+ 112199: call   23e10 <malloc@plt>
+ 11219e: mov    0x10c(%esp),%edx
+ 1121a5: test   %eax,%eax
+ 1121a7: mov    %eax,(%edx)
+ 1121a9: je     112228 <tee_token_cryptid_request@@Base+0x158>
+ 1121ab: mov    %eax,0x6c(%esp)
+ 1121af: mov    0x100(%esp),%eax
+ 1121b6: movb   $0xc,0xac(%esp)
+ 1121be: movb   $0x1,0xad(%esp)
+ 1121c6: movb   $0xc,0xae(%esp)
+ 1121ce: movb   $0x2,0xaf(%esp)
+ 1121d6: mov    %ebp,0xb0(%esp)
+ 1121dd: mov    %esi,0xc8(%esp)
+ 1121e4: movl   $0x0,0x40(%esp)
+ 1121ec: mov    %eax,0xbc(%esp)
+ 1121f3: call   f70f0 <DX_CclibInit@@Base>
+ 1121f8: test   %eax,%eax
+ 1121fa: je     112240 <tee_token_cryptid_request@@Base+0x170>
+ 1121fc: mov    %eax,0x20(%esp)
+ 112200: mov    0x10c(%esp),%eax
+ 112207: mov    (%eax),%edx
+ 112209: mov    %edx,(%esp)
+ 11220c: call   23ea0 <free@plt>
+ 112211: mov    0x10c(%esp),%eax
+ 112218: movl   $0x0,(%eax)
+ 11221e: mov    0x20(%esp),%eax
+ 112222: jmp    11222d <tee_token_cryptid_request@@Base+0x15d>
+ 112224: lea    0x0(%esi,%eiz,1),%esi
+ 112228: mov    $0x1,%eax
+ 11222d: lea    0xec(%esp),%esp
+ 112234: pop    %ebx
+ 112235: pop    %esi
+ 112236: pop    %edi
+ 112237: pop    %ebp
+ 112238: ret
+ 112239: lea    0x0(%esi,%eiz,1),%esi
+ 112240: movl   $0x0,(%esp)
+ 112247: lea    0x3c(%esp),%esi
+ 11224b: mov    %esi,0x4(%esp)
+ 11224f: call   fe850 <TEEC_InitializeContext@@Base>
+ 112254: test   %eax,%eax
+ 112256: mov    %eax,%edi
+ 112258: je     112268 <tee_token_cryptid_request@@Base+0x198>
+ 11225a: call   f7140 <DX_CclibFini@@Base>
+ 11225f: mov    %edi,%eax
+ 112261: jmp    1121fc <tee_token_cryptid_request@@Base+0x12c>
+ 112263: nop
+ 112264: lea    0x0(%esi,%eiz,1),%esi
+ 112268: movl   $0x0,0x14(%esp)
+ 112270: lea    0x40(%esp),%eax
+ 112274: mov    %eax,0x28(%esp)
+ 112278: mov    %eax,0x18(%esp)
+ 11227c: lea    -0x3ea7c(%ebx),%eax ; "PROVISIONING"
+ 112282: mov    %eax,0x8(%esp)
+ 112286: lea    0x88(%esp),%eax
+ 11228d: movl   $0x0,0x10(%esp)
+ 112295: movl   $0x0,0xc(%esp)
+ 11229d: mov    %esi,(%esp)
+ 1122a0: mov    %eax,0x4(%esp)
+ 1122a4: mov    %eax,0x24(%esp)
+ 1122a8: call   fea60 <TEEC_OpenSession@@Base>
+ 1122ad: test   %eax,%eax
+ 1122af: mov    %eax,%edi
+ 1122b1: jne    1122f0 <tee_token_cryptid_request@@Base+0x220>
+ 1122b3: lea    0x44(%esp),%eax
+ 1122b7: mov    %eax,0x2c(%esp)
+ 1122bb: mov    %eax,%edx
+ 1122bd: mov    %edx,%edi
+ 1122bf: mov    %ebp,%eax
+ 1122c1: jmp    1122d2 <tee_token_cryptid_request@@Base+0x202>
+ 1122c3: nop
+ 1122c4: lea    0x0(%esi,%eiz,1),%esi
+ 1122c8: mov    0x4(%edi),%eax
+ 1122cb: add    $0x4,%edi
+ 1122ce: test   %eax,%eax
+ 1122d0: je     1122fd <tee_token_cryptid_request@@Base+0x22d>
+ 1122d2: mov    %eax,0x4(%esp)
+ 1122d6: mov    %esi,(%esp)
+ 1122d9: call   fe920 <TEEC_RegisterSharedMemory@@Base>
+ 1122de: test   %eax,%eax
+ 1122e0: je     1122c8 <tee_token_cryptid_request@@Base+0x1f8>
+ 1122e2: mov    %eax,%edi
+ 1122e4: mov    0x24(%esp),%eax
+ 1122e8: mov    %eax,(%esp)
+ 1122eb: call   fef10 <TEEC_CloseSession@@Base>
+ 1122f0: mov    %esi,(%esp)
+ 1122f3: call   fe8f0 <TEEC_FinalizeContext@@Base>
+ 1122f8: jmp    11225a <tee_token_cryptid_request@@Base+0x18a>
+ 1122fd: mov    0x28(%esp),%eax
+ 112301: movl   $0x6,0x4(%esp)
+ 112309: mov    %eax,0xc(%esp)
+ 11230d: mov    0x20(%esp),%eax
+ 112311: mov    %eax,0x8(%esp)
+ 112315: mov    0x24(%esp),%eax
+ 112319: mov    %eax,(%esp)
+ 11231c: call   fef40 <TEEC_InvokeCommand@@Base>
+ 112321: mov    %eax,%edi
+ 112323: mov    %ebp,%eax
+ 112325: mov    0x2c(%esp),%ebp
+ 112329: lea    0x0(%esi,%eiz,1),%esi
+ 112330: mov    %eax,(%esp)
+ 112333: add    $0x4,%ebp
+ 112336: call   fea30 <TEEC_ReleaseSharedMemory@@Base>
+ 11233b: mov    0x0(%ebp),%eax
+ 11233e: test   %eax,%eax
+ 112340: jne    112330 <tee_token_cryptid_request@@Base+0x260>
+ 112342: test   %edi,%edi
+ 112344: jne    11237d <tee_token_cryptid_request@@Base+0x2ad>
+ 112346: mov    0x24(%esp),%eax
+ 11234a: mov    %eax,(%esp)
+ 11234d: call   fef10 <TEEC_CloseSession@@Base>
+ 112352: mov    %esi,(%esp)
+ 112355: call   fe8f0 <TEEC_FinalizeContext@@Base>
+ 11235a: call   f7140 <DX_CclibFini@@Base>
+ 11235f: mov    0xd4(%esp),%eax
+ 112366: mov    0x108(%esp),%edx
+ 11236d: mov    %eax,(%edx)
+ 11236f: lea    0xec(%esp),%esp
+ 112376: pop    %ebx
+ 112377: xor    %eax,%eax
+ 112379: pop    %esi
+ 11237a: pop    %edi
+ 11237b: pop    %ebp
+ 11237c: ret
+ 11237d: mov    %edi,0x8(%esp)
+ 112381: lea    -0x54f0c(%ebx),%eax ; "ifp_process_cmd failed. error(0x%x)"
+ 112387: mov    %eax,0x4(%esp)
+ 11238b: mov    -0x38(%ebx),%eax
+ 112391: mov    (%eax),%eax
+ 112393: mov    %eax,(%esp)
+ 112396: call   24470 <fprintf@plt>
+ 11239b: jmp    1122e4 <tee_token_cryptid_request@@Base+0x214>
+ 1123a0: push   %edi
+ 1123a1: push   %esi
+ 1123a2: push   %ebx
+ 1123a3: call   251ac <inflateReset@plt+0x85c>
+ 1123a8: add    $0x9b944,%ebx
+ 1123ae: lea    -0x10(%esp),%esp
+ 1123b2: mov    0x20(%esp),%edi
+ 1123b6: mov    0x24(%esp),%esi
+ 1123ba: test   %edi,%edi
+ 1123bc: je     112408 <tee_token_gen_shared_ecc@@Base+0x68>
+ 1123be: test   %esi,%esi
+ 1123c0: je     112408 <tee_token_gen_shared_ecc@@Base+0x68>
+ 1123c2: movl   $0x0,(%edi)
+ 1123c8: movl   $0x40,(%esp)
+ 1123cf: call   23e10 <malloc@plt>
+ 1123d4: mov    %eax,(%esi)
+ 1123d6: mov    %eax,%edx
+ 1123d8: test   %edx,%edx
+ 1123da: mov    $0x2,%eax
+ 1123df: je     11240d <tee_token_gen_shared_ecc@@Base+0x6d>
+ 1123e1: movl   $0x40,(%edi)
+ 1123e7: xor    %al,%al
+ 1123e9: lea    0x0(%esi,%eiz,1),%esi
+ 1123f0: mov    (%esi,%eax,4),%edx
+ 1123f3: mov    %al,(%edx)
+ 1123f5: add    $0x1,%eax
+ 1123f8: cmp    $0x40,%eax
+ 1123fb: jne    1123f0 <tee_token_gen_shared_ecc@@Base+0x50>
+ 1123fd: lea    0x10(%esp),%esp
+ 112401: xor    %al,%al
+ 112403: pop    %ebx
+ 112404: pop    %esi
+ 112405: pop    %edi
+ 112406: ret
+ 112407: nop
+ 112408: mov    $0x1,%eax
+ 11240d: lea    0x10(%esp),%esp
+ 112411: pop    %ebx
+ 112412: pop    %esi
+ 112413: pop    %edi
+ 112414: ret
+ 112415: lea    0x0(%esi,%eiz,1),%esi
+ 112419: lea    0x0(%edi,%eiz,1),%edi
+ 112420: push   %ebp
+ 112421: mov    $0x8,%ecx
+ 112426: push   %edi
+ 112427: push   %esi
+ 112428: push   %ebx
+ 112429: call   251ac <inflateReset@plt+0x85c>
+ 11242e: add    $0x9b8be,%ebx
+ 112434: lea    -0xbc(%esp),%esp
+ 11243b: lea    0x34(%esp),%eax
+ 11243f: lea    0x58(%esp),%esi
+ 112443: mov    %eax,0x28(%esp)
+ 112447: mov    %esi,%edi
+ 112449: xor    %eax,%eax
+ 11244b: lea    0x78(%esp),%edx

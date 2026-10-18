@@ -1,0 +1,128 @@
+===== func 0x112ac0 .. 0x112ca0 =====
+F112ac0: push   %esi
+ 112ac1: push   %ebx
+ 112ac2: call   251ac <inflateReset@plt+0x85c>
+ 112ac7: add    $0x9b225,%ebx
+ 112acd: lea    -0x14(%esp),%esp
+ 112ad1: cmpl   $0x1,0x20(%esp)
+ 112ad6: jg     112b18 <is_secure_boot_enabled@@Base+0x3f8>
+ 112ad8: call   11c5b0 <error@@Base+0x7c0>
+ 112add: test   %eax,%eax
+ 112adf: mov    %eax,%esi
+ 112ae1: jne    112b00 <is_secure_boot_enabled@@Base+0x3e0>
+ 112ae3: lea    -0x696d9(%ebx),%eax
+ 112ae9: mov    %eax,(%esp)
+ 112aec: call   2e3f0 <inflateReset@plt+0x9aa0>
+ 112af1: lea    0x14(%esp),%esp
+ 112af5: mov    %esi,%eax
+ 112af7: pop    %ebx
+ 112af8: pop    %esi
+ 112af9: ret
+ 112afa: lea    0x0(%esi),%esi
+ 112b00: lea    -0x60247(%ebx),%eax ; "Fail erase_token_umip"
+ 112b06: mov    %eax,(%esp)
+ 112b09: call   2d110 <inflateReset@plt+0x87c0>
+ 112b0e: lea    0x14(%esp),%esp
+ 112b12: mov    %esi,%eax
+ 112b14: pop    %ebx
+ 112b15: pop    %esi
+ 112b16: ret
+ 112b17: nop
+ 112b18: lea    -0x54ee4(%ebx),%eax ; "oem_erase_token requires no argument"
+ 112b1e: mov    $0xffffffff,%esi
+ 112b23: mov    %eax,(%esp)
+ 112b26: call   2d110 <inflateReset@plt+0x87c0>
+ 112b2b: lea    0x14(%esp),%esp
+ 112b2f: mov    %esi,%eax
+ 112b31: pop    %ebx
+ 112b32: pop    %esi
+ 112b33: ret
+ 112b34: lea    0x0(%esi),%esi
+ 112b3a: lea    0x0(%edi),%edi
+ 112b40: push   %esi
+ 112b41: push   %ebx
+ 112b42: call   251ac <inflateReset@plt+0x85c>
+ 112b47: add    $0x9b1a5,%ebx
+ 112b4d: lea    -0x24(%esp),%esp
+ 112b51: lea    -0x60231(%ebx),%esi ; "/tmp/partition.tbl"
+ 112b57: mov    0x34(%esp),%eax
+ 112b5b: mov    %esi,(%esp)
+ 112b5e: mov    %eax,0x8(%esp)
+ 112b62: mov    0x30(%esp),%eax
+ 112b66: mov    %eax,0x4(%esp)
+ 112b6a: call   30470 <inflateReset@plt+0xbb20>
+ 112b6f: test   %eax,%eax
+ 112b71: je     112b81 <is_secure_boot_enabled@@Base+0x461>
+ 112b73: lea    -0x54ebc(%ebx),%eax ; "Could not flash partition file"
+ 112b79: mov    %eax,(%esp)
+ 112b7c: call   2d110 <inflateReset@plt+0x87c0>
+ 112b81: movl   $0x2,(%esp)
+ 112b88: lea    0x18(%esp),%eax
+ 112b8c: mov    %eax,0x4(%esp)
+ 112b90: mov    %esi,0x1c(%esp)
+ 112b94: movl   $0x0,0x18(%esp)
+ 112b9c: call   111550 <tee_policy_check@@Base+0x4c10>
+ 112ba1: lea    0x24(%esp),%esp
+ 112ba5: xor    %eax,%eax
+ 112ba7: pop    %ebx
+ 112ba8: pop    %esi
+ 112ba9: ret
+ 112baa: lea    0x0(%esi),%esi
+ 112bb0: push   %esi
+ 112bb1: push   %ebx
+ 112bb2: call   251ac <inflateReset@plt+0x85c>
+ 112bb7: add    $0x9b135,%ebx
+ 112bbd: lea    -0x14(%esp),%esp
+ 112bc1: lea    -0x6021e(%ebx),%eax ; "ro.serialno"
+ 112bc7: lea    0x8994(%ebx),%esi
+ 112bcd: movl   $0x0,0x8(%esp)
+ 112bd5: mov    %eax,(%esp)
+ 112bd8: mov    %esi,0x4(%esp)
+ 112bdc: call   24190 <property_get@plt>
+ 112be1: movl   $0x80,0x4(%esp)
+ 112be9: mov    %esi,(%esp)
+ 112bec: call   240d0 <__strlen_chk@plt>
+ 112bf1: mov    0x24(%esp),%edx
+ 112bf5: mov    %eax,0x4(%esp)
+ 112bf9: mov    %esi,(%esp)
+ 112bfc: mov    %edx,0xc(%esp)
+ 112c00: mov    0x20(%esp),%edx
+ 112c04: mov    %edx,0x8(%esp)
+ 112c08: call   11d830 <error@@Base+0x1a40>
+ 112c0d: test   %eax,%eax
+ 112c0f: je     112c28 <is_secure_boot_enabled@@Base+0x508>
+ 112c11: lea    -0x601d6(%ebx),%eax ; "FRP signature verify fail!"
+ 112c17: mov    %eax,(%esp)
+ 112c1a: call   2d110 <inflateReset@plt+0x87c0>
+ 112c1f: lea    0x14(%esp),%esp
+ 112c23: xor    %eax,%eax
+ 112c25: pop    %ebx
+ 112c26: pop    %esi
+ 112c27: ret
+ 112c28: lea    -0x60212(%ebx),%eax ; "FRP signature verify pass!"
+ 112c2e: mov    %eax,(%esp)
+ 112c31: call   2cfb0 <inflateReset@plt+0x8660>
+ 112c36: lea    -0x54e9c(%ebx),%eax ; "Start to erase persistent partition!"
+ 112c3c: mov    %eax,(%esp)
+ 112c3f: call   2cfb0 <inflateReset@plt+0x8660>
+ 112c44: movl   $0x0,0x8(%esp)
+ 112c4c: lea    -0x601f7(%ebx),%eax ; "persistent"
+ 112c52: movl   $0x0,0x4(%esp)
+ 112c5a: mov    %eax,(%esp)
+ 112c5d: call   2a6c0 <inflateReset@plt+0x5d70>
+ 112c62: lea    -0x54e74(%ebx),%eax ; "The persistent partition has already been erased!"
+ 112c68: mov    %eax,(%esp)
+ 112c6b: call   2cfb0 <inflateReset@plt+0x8660>
+ 112c70: lea    -0x601ec(%ebx),%eax ; "Finish flashing sig!"
+ 112c76: mov    %eax,(%esp)
+ 112c79: call   3a780 <inflateReset@plt+0x15e30>
+ 112c7e: lea    -0x696d9(%ebx),%eax
+ 112c84: mov    %eax,(%esp)
+ 112c87: call   2e3f0 <inflateReset@plt+0x9aa0>
+ 112c8c: lea    0x14(%esp),%esp
+ 112c90: xor    %eax,%eax
+ 112c92: pop    %ebx
+ 112c93: pop    %esi
+ 112c94: ret
+ 112c95: lea    0x0(%esi,%eiz,1),%esi
+ 112c99: lea    0x0(%edi,%eiz,1),%edi

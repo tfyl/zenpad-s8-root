@@ -1,0 +1,36 @@
+########################################################
+#  BLUETOOTH CONFIGURATION - BROADCOM SPECIFIC
+########################################################
+
+on init
+    chmod 0660 /dev/ttyMFD0
+    chown bluetooth net_bt_stack /dev/ttyMFD0
+    insmod /lib/modules/bcm_bt_lpm.ko
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/state
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /dev/rfkill
+    chown bluetooth net_bt_stack /dev/rfkill
+    chown bluetooth net_bt_stack /sys/class/rfkill/rfkill0/type
+    chmod 0660 /proc/host_wake
+    chown bluetooth net_bt_stack /proc/host_wake
+
+on post-fs
+    mkdir /config/bt
+    mkdir /factory/bt
+    chown system bluetooth /config/bt
+    chmod 0770 /config/bt
+    chown system bluetooth /factory/bt
+    chmod 0770 /factory/bt
+    chown bluetooth net_bt_stack /sys/devices/pci0000:00/0000:00:05.0/power/control
+    chmod 0660 /sys/devices/pci0000:00/0000:00:05.0/power/control
+
+on early-boot
+    chmod 0644 /config/bt/bd_addr.conf
+    setprop ro.bt.bdaddr_path "/config/bt/bd_addr.conf"
+    start bd_prov
+
+service rfkill_bt /system/bin/sh /rfkill_bt.sh
+    class core
+    user root
+    oneshot
+    seclabel u:r:rfkill_bt:s0

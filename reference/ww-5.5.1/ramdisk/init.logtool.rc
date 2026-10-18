@@ -1,0 +1,372 @@
+on charger
+	mount ext4 /dev/block/by-name/cache /cache nosuid nodev barrier=1,data=ordered
+	mkdir /cache/logtool
+	mkdir /cache/logtool/cos
+	start logtool-cosk
+	start logtool-cos
+	start logtool-cos-user
+
+on post-fs-data
+	mkdir /data/uts 0750 system system
+	mkdir /data/boot 0777 system system
+	mkdir /data/debug 0777 system system
+	mkdir /data/logtool 0777 system system
+	mkdir /data/coslog 0777 system system
+	mkdir /data/roslog 0777 system system
+	mkdir /data/poslog 0777 system system
+
+service logtool-mos-user /system/bin/sh /system/bin/logt_bootup_mos
+	class main
+	oneshot
+	seclabel u:r:dumpstate:s0
+
+service logtool-cos-user /system/bin/sh /system/bin/logt_bootup_cos
+	user root
+	group root
+	disabled
+	oneshot
+	seclabel u:r:dumpstate:s0
+
+service logtool-cos /system/bin/sh /system/bin/logt_coslogdog
+	class logging-services
+	disabled
+	oneshot
+	seclabel u:r:dumpstate:s0
+
+service logtool-cosk /system/bin/sh /system/bin/logt_cosklogdog
+	class logging-services
+	disabled
+	oneshot
+	seclabel u:r:dumpstate:s0
+
+service logtool-executor /system/bin/sh /data/data/com.asus.LogTool/files/logtool-executor.sh
+	user root
+	group root
+	disabled
+	oneshot
+	class logging-services
+	seclabel u:r:dumpstate:s0
+
+service logtool-trigger /system/bin/sh /data/data/com.asus.LogTool/files/logtool-trigger.sh
+	user root
+	group root
+	disabled
+	oneshot
+	class logging-services
+	seclabel u:r:dumpstate:s0
+
+service logMemLight /system/bin/sh /system/bin/get_mem_raw_data.sh -m2
+    class late_start
+    disabled
+
+service logMemHeavy /system/bin/sh /system/bin/get_mem_raw_data.sh -l -v -m3
+    class late_start
+    disabled
+
+on property:persist.logtool.mem.logging=light
+    stop logMemHeavy
+    start logMemLight
+
+on property:persist.logtool.mem.logging=heavy
+    stop logMemLight
+    start logMemHeavy
+
+on property:persist.logtool.mem.logging=stop
+    stop logMemLight
+    stop logMemHeavy
+    write /sys/module/lowmemorykiller/parameters/debug_level 1
+
+service logt_bootup /system/bin/sh /system/bin/logt_bootup
+    class main
+    oneshot
+    seclabel u:r:dumpstate:s0
+
+service logdog-conf /system/bin/sh /data/data/com.asus.LogTool/files/logdog-conf.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:dumpstate:s0
+
+service logdog-logcat /system/bin/sh /data/data/com.asus.LogTool/files/logdog-starter.sh logcat
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+
+service logdog-main /system/bin/sh /data/data/com.asus.LogTool/files/logdog-starter.sh main
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service logdog-radio /system/bin/sh /data/data/com.asus.LogTool/files/logdog-starter.sh radio
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service logdog-events /system/bin/sh /data/data/com.asus.LogTool/files/logdog-starter.sh events
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service logdog-system /system/bin/sh /data/data/com.asus.LogTool/files/logdog-starter.sh system
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service klogdog /system/bin/sh /data/data/com.asus.LogTool/files/klogdog-starter.sh
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service tcpdump /system/bin/sh /data/data/com.asus.LogTool/files/tcpdump-starter.sh
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service hcidump /system/bin/sh /data/data/com.asus.LogTool/files/hcidump-starter.sh
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+service modemtrace /system/bin/sh /data/data/com.asus.LogTool/files/modemtrace-starter.sh
+    user root
+    group root
+    disabled
+    class logging-services
+    seclabel u:r:dumpstate:s0
+
+service modemstop /system/bin/sh /system/bin/configure_trace_modem -d -t0
+    user root
+    group root
+    disabled
+    oneshot
+    class logging-services
+    seclabel u:r:dumpstate:s0
+
+service archive-logs /system/bin/sh /data/data/com.asus.LogTool/files/archive-logs.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:dumpstate:s0
+service clear-logs /system/bin/sh /data/data/com.asus.LogTool/files/clear-logs.sh
+    user root
+    group root
+    disabled
+    oneshot
+    seclabel u:r:dumpstate:s0
+
+service reset_modem /system/bin/stmd-test 7
+    class logging-services
+    oneshot
+    seclabel u:r:dumpstate:s0
+
+on property:logtool.modem.nologging=-1
+	restart reset_modem
+
+on property:logtool.modem.relogging=1
+	restart modemtrace
+
+service stop_modem_trace /system/bin/sh /data/data/com.asus.LogTool/files/modem-stopall.sh
+    class logging-services
+    disabled
+    oneshot
+    seclabel u:r:dumpstate:s0
+
+service logt_onechance /system/bin/sh /system/bin/logt_onechance
+    user root
+    group root
+    class logging-services
+    disabled
+    seclabel u:r:dumpstate:s0
+
+# For log uploader by joey_lee@asus.com
+service logbackup /system/bin/sh /data/data/com.asus.LogTool/files/packlogs.sh
+    class late_start
+    user root
+    group sdcard_rw
+    oneshot
+    disabled
+    seclabel u:r:dumpstate:s0
+
+#service uts_bootup /system/bin/sh /system/bin/uts_bootup
+#    class late_start
+#    user root
+#    group root
+#    oneshot
+
+# turn on/off PSH
+service psh_logging /system/bin/sh /data/data/com.asus.LogTool/files/pshdog-starter.sh
+    user root
+    group root
+    class logging-services
+    disabled
+    seclabel u:r:dumpstate:s0
+
+on property:persist.logtool.sensor.psh=1
+	start psh_logging
+
+on property:persist.logtool.sensor.psh=0
+	stop psh_logging
+
+# turn on/off modem.usblog
+service m_usb_log /system/bin/sh /system/bin/start_modem_setting
+    user root
+    group root
+    class logging-services
+    oneshot
+    disabled
+    seclabel u:r:dumpstate:s0
+
+# turn on/off audio log
+service audio_logging /system/bin/sh /data/data/com.asus.LogTool/files/audiolog-toggle.sh
+    user root
+    group root
+    class logging-services
+    oneshot
+    disabled
+    seclabel u:r:dumpstate:s0
+
+#service uts-kernel /system/bin/logcat -b kernel -v uptime -u /uts-kernel.txt -n 99 -r2000
+#    class uts_service
+#    user root
+#    group root
+#    seclabel u:r:dumpstate:s0
+
+#service uts-main /system/bin/logcat -b main -b system -v uptime -u /uts-main.txt -n 99 -r2000
+#    class uts_service
+#    user root
+#    group root
+#    seclabel u:r:dumpstate:s0
+
+#service uts-radio /system/bin/logcat -b radio -v uptime -u /uts-radio.txt -n 99 -r2000
+#    class uts_service
+#    user root
+#    group root
+#    seclabel u:r:dumpstate:s0
+
+#service uts-events /system/bin/logcat -b events -v uptime -u /uts-events.txt -n 99 -r2000
+#    class uts_service
+#    user root
+#    group root
+#    seclabel u:r:dumpstate:s0
+
+on property:persist.logtool.audio=*
+	start audio_logging
+
+on property:persist.logtool.modem.usblog=1
+	setprop persist.logtool.modem.logging "0"
+	start m_usb_log
+	
+on property:persist.logtool.modem.usblog=0
+	setprop persist.service.mtsp.enable "0"
+
+on property:persist.logtool.modem.logging=1
+	setprop persist.logtool.modem.usblog "0"
+
+#turn on/off uart
+on property:persist.logtool.uart=1
+	write /sys/bus/i2c/devices/1-001a/rt5648_uart_switch 1
+	write /proc/sys/kernel/printk 7
+
+on property:persist.logtool.uart=0
+	write /sys/bus/i2c/devices/1-001a/rt5648_uart_switch 0
+	write /proc/sys/kernel/printk 0
+
+# COS
+on property:persist.logtool.cos.logging=1
+	mkdir /cache/logtool
+	write /cache/logtool/cos_enable 1
+
+on property:persist.logtool.cos.logging=0
+	mkdir /cache/logtool
+	write /cache/logtool/cos_enable 0
+
+# POS
+on property:persist.logtool.pos.logging=1
+	mkdir /cache/logtool
+	write /cache/logtool/pos_enable 1
+
+on property:persist.logtool.pos.logging=0
+	mkdir /cache/logtool
+	write /cache/logtool/pos_enable 0
+
+# ROS
+on property:persist.logtool.ros.logging=1
+	mkdir /cache/logtool
+	write /cache/logtool/ros_enable 1
+
+on property:persist.logtool.ros.logging=0
+	mkdir /cache/logtool
+	write /cache/logtool/ros_enable 0
+
+# Touch
+on property:persist.logtool.touch.logging=1
+	write /proc/touch_debug_log 1
+
+on property:persist.logtool.touch.logging=0
+	write /proc/touch_debug_log 0
+
+# Touch for developer
+on property:persist.logtool.touch.logrd=1
+        write /proc/p72g_touch_debug_log 1
+
+on property:persist.logtool.touch.logrd=0
+        write /proc/p72g_touch_debug_log 0
+
+# UPI
+on property:persist.logtool.upi.loglv=0
+	write /sys/module/ug31xx_battery/parameters/op_options 0
+
+on property:persist.logtool.upi.loglv=4
+	write /sys/module/ug31xx_battery/parameters/op_options 4
+
+on property:persist.logtool.upi.loglv=8
+	write /sys/module/ug31xx_battery/parameters/op_options 8
+
+on property:persist.logtool.upi.loglv=12
+	write /sys/module/ug31xx_battery/parameters/op_options 12
+
+on property:persist.logtool.upi.loglv=rst
+	asus_exec /system/bin/upi_ug31xx force_reset_totally
+	asus_exec /system/bin/setprop persist.logtool.upi.loglv 0
+
+# Gravity-Sensor
+on property:persist.logtool.sensor.gravity=1
+	write /sys/bus/i2c/devices/5-000e/message 1
+
+on property:persist.logtool.sensor.gravity=0
+	write /sys/bus/i2c/devices/5-000e/message 0
+	write /sys/bus/i2c/devices/5-000e/message 2
+	write /sys/bus/i2c/devices/5-000e/message 3
+
+on property:logtool.onechance.logging=1
+	start logt_onechance
+
+on property:logtool.onechance.logging=0
+	stop logt_onechance
+
+#########
+#on property:persist.asus.autoupload.enable=1
+#	start uts_bootup
+
+#on property:persist.asus.autoupload.enable=0
+#	start uts_bootup
+
+#on property:uts.logging=1
+#	class_start uts_service
+
+#on property:uts.logging=0
+#	class_reset uts_service
+
+#### END - LogTool service
+#######################################################################################

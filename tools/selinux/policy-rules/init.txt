@@ -1,0 +1,1729 @@
+
+== allow blk_file
+   adb_data_file                              relabelto
+   adb_keys_file                              relabelto
+   adbd_socket                                relabelto
+   anr_data_file                              relabelto
+   ap_log_srv_tmpfs                           relabelto
+   apk_data_file                              relabelto
+   apk_private_data_file                      relabelto
+   apk_private_tmp_file                       relabelto
+   apk_tmp_file                               relabelto
+   asec_apk_file                              relabelto
+   asec_image_file                            relabelto
+   asec_public_file                           relabelto
+   atproxy_socket                             relabelto
+   atproxy_tmpfs                              relabelto
+   audio_data_file                            relabelto
+   backup_data_file                           relabelto
+   bcu_cpufreqrel_tmpfs                       relabelto
+   block_device                               getattr open read setattr
+   bluetooth_data_file                        relabelto
+   bluetooth_efs_file                         relabelto
+   bluetooth_socket                           relabelto
+   bluetooth_tmpfs                            relabelto
+   bootanim_tmpfs                             relabelto
+   bootchart_data_file                        relabelto
+   cache_backup_file                          relabelto
+   cache_file                                 relabelto
+   camera_data_file                           relabelto
+   config_file                                relabelto
+   coredump_file                              relabelto
+   dalvikcache_data_file                      relabelto
+   dalvikcache_profiles_data_file             relabelto
+   data_sensors_file                          relabelto
+   debuggerd_tmpfs                            relabelto
+   dev_type                                   getattr ioctl lock open read
+   device                                     append create getattr ioctl lock open read rename setattr unlink write
+   dhcp_data_file                             relabelto
+   dhcp_tmpfs                                 relabelto
+   dm_device                                  append getattr ioctl lock open read write
+   dnsmasq_script_data_file                   relabelto
+   dnsmasq_script_tmpfs                       relabelto
+   dnsproxyd_socket                           relabelto
+   dpstmgr_tmpfs                              relabelto
+   drm_data_file                              relabelto
+   drmserver_socket                           relabelto
+   drmserver_tmpfs                            relabelto
+   dts_data_file                              relabelto
+   dtshpxservice_tmpfs                        relabelto
+   dumpstate_socket                           relabelto
+   dumpstate_tmpfs                            relabelto
+   efs_file                                   relabelto
+   factory_file                               relabelto
+   fg_conf_tmpfs                              relabelto
+   fingerprintd_data_file                     relabelto
+   fingerprintd_tmpfs                         relabelto
+   fsck_tmpfs                                 relabelto
+   fwmarkd_socket                             relabelto
+   gatekeeper_data_file                       relabelto
+   gatekeeperd_tmpfs                          relabelto
+   gps_control                                relabelto
+   gps_data_file                              relabelto
+   gps_socket                                 relabelto
+   gpsd_tmpfs                                 relabelto
+   hci_attach_tmpfs                           relabelto
+   hdcpd_data_file                            relabelto
+   hdcpd_tmpfs                                relabelto
+   heapdump_data_file                         relabelto
+   init_tmpfs                                 relabelto
+   inputflinger_tmpfs                         relabelto
+   install_data_file                          relabelto
+   install_recovery_tmpfs                     relabelto
+   installd_socket                            relabelto
+   installd_tmpfs                             relabelto
+   isolated_app_tmpfs                         relabelto
+   itux_data_file                             relabelto
+   keychain_data_file                         relabelto
+   keystore_data_file                         relabelto
+   keystore_tmpfs                             relabelto
+   lmkd_socket                                relabelto
+   lmkd_tmpfs                                 relabelto
+   log_file                                   relabelto
+   logd_socket                                relabelto
+   logd_tmpfs                                 relabelto
+   logdr_socket                               relabelto
+   logdw_socket                               relabelto
+   logtoold_data_file                         relabelto
+   mdns_socket                                relabelto
+   mdnsd_socket                               relabelto
+   mdnsd_tmpfs                                relabelto
+   media_data_file                            relabelto
+   media_rw_data_file                         relabelto
+   mediaserver_tmpfs                          relabelto
+   metadata_block_device                      append getattr ioctl lock open read write
+   misc_logd_file                             relabelto
+   misc_user_data_file                        relabelto
+   mmgr_app_tmpfs                             relabelto
+   mmgr_socket                                relabelto
+   mmgr_tmpfs                                 relabelto
+   mnt_expand_file                            relabelto
+   mnt_media_rw_file                          relabelto
+   mnt_media_rw_stub_file                     relabelto
+   mnt_user_file                              relabelto
+   modem_fw_data_file                         relabelto
+   mtp_tmpfs                                  relabelto
+   mtpd_socket                                relabelto
+   mts_tmpfs                                  relabelto
+   net_data_file                              relabelto
+   netd_socket                                relabelto
+   netd_tmpfs                                 relabelto
+   nfc_data_file                              relabelto
+   nfc_tmpfs                                  relabelto
+   nvm_ctl_socket                             relabelto
+   nvm_server_tmpfs                           relabelto
+   perfprofd_data_file                        relabelto
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         relabelto
+   property_data_file                         relabelto
+   property_socket                            relabelto
+   pvrsrvctl_tmpfs                            relabelto
+   racoon_socket                              relabelto
+   racoon_tmpfs                               relabelto
+   radio_data_file                            relabelto
+   radio_tmpfs                                relabelto
+   resourcecache_data_file                    relabelto
+   rfid_monzaxd_tmpfs                         relabelto
+   rild_debug_socket                          relabelto
+   rild_socket                                relabelto
+   rild_tmpfs                                 relabelto
+   sap_uim_socket                             relabelto
+   security_file                              relabelto
+   sensorhubd_file                            relabelto
+   sensorhubd_socket                          relabelto
+   sensorhubd_tmpfs                           relabelto
+   sensors_config_tmpfs                       relabelto
+   servicemanager_tmpfs                       relabelto
+   shared_relro_file                          relabelto
+   shared_relro_tmpfs                         relabelto
+   shell_data_file                            relabelto
+   shell_tmpfs                                relabelto
+   storage_file                               relabelto
+   storage_stub_file                          relabelto
+   surfaceflinger_cache_file                  relabelto
+   surfaceflinger_tmpfs                       relabelto
+   swap_block_device                          append getattr ioctl lock open read write
+   system_app_data_file                       relabelto
+   system_app_tmpfs                           relabelto
+   system_data_file                           relabelto
+   system_ndebug_socket                       relabelto
+   system_server_tmpfs                        relabelto
+   system_wpa_socket                          relabelto
+   systemkeys_data_file                       relabelto
+   tee_data_file                              relabelto
+   tee_tmpfs                                  relabelto
+   themepack_exchange_file                    relabelto
+   themepack_module_file                      relabelto
+   thermal_socket                             relabelto
+   tmpfs                                      write
+   tombstone_data_file                        relabelto
+   toolbox_tmpfs                              relabelto
+   tzdatacheck_tmpfs                          relabelto
+   ueventd_tmpfs                              relabelto
+   uncrypt_tmpfs                              relabelto
+   unencrypted_data_file                      relabelto
+   unlabeled                                  relabelto
+   untrusted_app_tmpfs                        relabelto
+   userdata_block_device                      write
+   vdc_tmpfs                                  relabelto
+   vold_data_file                             relabelto
+   vold_socket                                relabelto
+   vold_tmpfs                                 relabelto
+   vpn_data_file                              relabelto
+   wallpaper_file                             relabelto
+   wifi_data_file                             relabelto
+   wpa_socket                                 relabelto
+   wpa_tmpfs                                  relabelto
+   zoneinfo_data_file                         relabelto
+   zygote_socket                              relabelto
+   zygote_tmpfs                               relabelto
+
+== allow capability
+   init                                       chown dac_override fowner fsetid kill mknod net_admin net_raw setgid setuid sys_admin sys_boot sys_module sys_rawio sys_resource sys_time sys_tty_config
+
+== allow capability2
+   init                                       syslog
+
+== allow chr_file
+   adb_data_file                              relabelto
+   adb_device                                 open read setattr
+   adb_keys_file                              relabelto
+   adbd_socket                                relabelto
+   alarm_device                               getattr ioctl lock open read setattr
+   anr_data_file                              relabelto
+   ap_log_srv_tmpfs                           relabelto
+   apk_data_file                              relabelto
+   apk_private_data_file                      relabelto
+   apk_private_tmp_file                       relabelto
+   apk_tmp_file                               relabelto
+   asec_apk_file                              relabelto
+   asec_image_file                            relabelto
+   asec_public_file                           relabelto
+   ashmem_device                              append getattr ioctl lock open read setattr write
+   atproxy_device                             open read setattr
+   atproxy_socket                             relabelto
+   atproxy_tmpfs                              relabelto
+   audio_data_file                            relabelto
+   audio_device                               open read setattr
+   backup_data_file                           relabelto
+   bcu_cpufreqrel_tmpfs                       relabelto
+   binder_device                              append getattr ioctl lock open read setattr write
+   block_device                               open read setattr
+   bluetooth_data_file                        relabelto
+   bluetooth_efs_file                         relabelto
+   bluetooth_socket                           relabelto
+   bluetooth_tmpfs                            relabelto
+   boot_block_device                          open read setattr
+   bootanim_tmpfs                             relabelto
+   bootchart_data_file                        relabelto
+   cache_backup_file                          relabelto
+   cache_block_device                         open read setattr
+   cache_file                                 relabelto
+   camera_data_file                           relabelto
+   camera_device                              open read setattr
+   config_file                                relabelto
+   console_device                             append getattr ioctl lock open read setattr write
+   coredump_file                              relabelto
+   cpuctl_device                              open read setattr
+   dalvikcache_data_file                      relabelto
+   dalvikcache_profiles_data_file             relabelto
+   data_sensors_file                          relabelto
+   debuggerd_tmpfs                            relabelto
+   device                                     append getattr ioctl lock open read setattr write
+   devpts                                     open read write
+   dhcp_data_file                             relabelto
+   dhcp_tmpfs                                 relabelto
+   dm_device                                  append getattr ioctl lock open read setattr write
+   dnsmasq_script_data_file                   relabelto
+   dnsmasq_script_tmpfs                       relabelto
+   dnsproxyd_socket                           relabelto
+   dpstmgr_tmpfs                              relabelto
+   drm_data_file                              relabelto
+   drmserver_socket                           relabelto
+   drmserver_tmpfs                            relabelto
+   dts_data_file                              relabelto
+   dtshpxservice_tmpfs                        relabelto
+   dumpstate_socket                           relabelto
+   dumpstate_tmpfs                            relabelto
+   efs_file                                   relabelto
+   factory_file                               relabelto
+   fg_conf_tmpfs                              relabelto
+   fingerprintd_data_file                     relabelto
+   fingerprintd_tmpfs                         relabelto
+   frp_block_device                           open read setattr
+   fsck_tmpfs                                 relabelto
+   fscklogs                                   open read setattr
+   full_device                                open read setattr
+   fuse_device                                open read setattr
+   fwmarkd_socket                             relabelto
+   gatekeeper_data_file                       relabelto
+   gatekeeperd_tmpfs                          relabelto
+   gps_control                                relabelto
+   gps_data_file                              relabelto
+   gps_device                                 open read setattr
+   gps_socket                                 relabelto
+   gpsd_tmpfs                                 relabelto
+   gpu_device                                 open read setattr
+   graphics_device                            ioctl open read setattr write
+   hci_attach_dev                             open read setattr
+   hci_attach_tmpfs                           relabelto
+   hdcpd_data_file                            relabelto
+   hdcpd_tmpfs                                relabelto
+   heapdump_data_file                         relabelto
+   hw_random_device                           getattr ioctl lock open read setattr
+   i2c_device                                 open read setattr
+   iio_device                                 open read setattr
+   init_tmpfs                                 relabelto
+   input_device                               ioctl open read setattr
+   inputflinger_tmpfs                         relabelto
+   install_data_file                          relabelto
+   install_recovery_tmpfs                     relabelto
+   installd_socket                            relabelto
+   installd_tmpfs                             relabelto
+   intel_sst_ctrl_device                      open read setattr
+   ion_device                                 append getattr ioctl lock open read setattr write
+   isolated_app_tmpfs                         relabelto
+   itux_data_file                             relabelto
+   keychain_data_file                         relabelto
+   keystore_data_file                         relabelto
+   keystore_tmpfs                             relabelto
+   klog_device                                open read setattr
+   kmsg_device                                open read setattr write
+   lmkd_socket                                relabelto
+   lmkd_tmpfs                                 relabelto
+   log_block_device                           open read setattr
+   log_device                                 append getattr ioctl lock open read setattr write
+   log_file                                   relabelto
+   logd_socket                                relabelto
+   logd_tmpfs                                 relabelto
+   logdr_socket                               relabelto
+   logdw_socket                               relabelto
+   logtoold_data_file                         relabelto
+   loop_device                                open read setattr
+   mdns_socket                                relabelto
+   mdnsd_socket                               relabelto
+   mdnsd_tmpfs                                relabelto
+   media_data_file                            relabelto
+   media_rw_data_file                         relabelto
+   mediaserver_tmpfs                          relabelto
+   metadata_block_device                      open read setattr
+   misc_logd_file                             relabelto
+   misc_user_data_file                        relabelto
+   mmgr_app_tmpfs                             relabelto
+   mmgr_socket                                relabelto
+   mmgr_tmpfs                                 relabelto
+   mnt_expand_file                            relabelto
+   mnt_media_rw_file                          relabelto
+   mnt_media_rw_stub_file                     relabelto
+   mnt_user_file                              relabelto
+   modem_fw_data_file                         relabelto
+   msr_device                                 open read setattr
+   mtd_device                                 open read setattr
+   mtp_device                                 open read setattr
+   mtp_tmpfs                                  relabelto
+   mtpd_socket                                relabelto
+   mts_tmpfs                                  relabelto
+   net_data_file                              relabelto
+   netd_socket                                relabelto
+   netd_tmpfs                                 relabelto
+   nfc_data_file                              relabelto
+   nfc_device                                 open read setattr
+   nfc_tmpfs                                  relabelto
+   null_device                                append getattr ioctl lock open read setattr write
+   nvm_ctl_socket                             relabelto
+   nvm_server_tmpfs                           relabelto
+   owntty_device                              append getattr ioctl lock open read setattr write
+   perfprofd_data_file                        relabelto
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         relabelto
+   pmsg_device                                append open read setattr write
+   ppp_device                                 open read setattr
+   properties_device                          open read setattr
+   property_data_file                         relabelto
+   property_socket                            relabelto
+   ptmx_device                                append getattr ioctl lock open read setattr write
+   pvrsrvctl_tmpfs                            relabelto
+   qtaguid_device                             open read setattr
+   racoon_socket                              relabelto
+   racoon_tmpfs                               relabelto
+   radio_data_file                            relabelto
+   radio_device                               open read setattr
+   radio_tmpfs                                relabelto
+   ram_device                                 open read setattr
+   random_device                              append getattr ioctl lock open read setattr write
+   recovery_block_device                      open read setattr
+   resourcecache_data_file                    relabelto
+   rfid_monzaxd_tmpfs                         relabelto
+   rild_debug_socket                          relabelto
+   rild_socket                                relabelto
+   rild_tmpfs                                 relabelto
+   root_block_device                          open read setattr
+   rpmsg_device                               open read setattr
+   rtc_device                                 open read setattr
+   sap_uim_socket                             relabelto
+   security_file                              relabelto
+   sensorhubd_device                          open read setattr
+   sensorhubd_file                            relabelto
+   sensorhubd_socket                          relabelto
+   sensorhubd_tmpfs                           relabelto
+   sensors_config_tmpfs                       relabelto
+   sensors_device                             open read setattr
+   sep_device                                 open read setattr
+   serial_device                              open read setattr
+   servicemanager_tmpfs                       relabelto
+   shared_relro_file                          relabelto
+   shared_relro_tmpfs                         relabelto
+   shell_data_file                            relabelto
+   shell_tmpfs                                relabelto
+   socket_device                              open read setattr
+   storage_file                               relabelto
+   storage_stub_file                          relabelto
+   surfaceflinger_cache_file                  relabelto
+   surfaceflinger_tmpfs                       relabelto
+   swap_block_device                          open read setattr
+   system_app_data_file                       relabelto
+   system_app_tmpfs                           relabelto
+   system_block_device                        open read setattr
+   system_data_file                           relabelto
+   system_ndebug_socket                       relabelto
+   system_server_tmpfs                        relabelto
+   system_wpa_socket                          relabelto
+   systemkeys_data_file                       relabelto
+   tee_data_file                              relabelto
+   tee_device                                 open read setattr
+   tee_tmpfs                                  relabelto
+   themepack_exchange_file                    relabelto
+   themepack_module_file                      relabelto
+   thermal_socket                             relabelto
+   tmpfs                                      append create getattr ioctl lock open read rename setattr unlink write
+   tombstone_data_file                        relabelto
+   toolbox_tmpfs                              relabelto
+   tty_device                                 append getattr ioctl lock open read setattr write
+   tun_device                                 open read setattr
+   tzdatacheck_tmpfs                          relabelto
+   ueventd_tmpfs                              relabelto
+   uhid_device                                open read setattr
+   uio_device                                 open read setattr
+   uncrypt_tmpfs                              relabelto
+   unencrypted_data_file                      relabelto
+   unlabeled                                  relabelto
+   untrusted_app_tmpfs                        relabelto
+   urandom_device                             append getattr ioctl lock open read setattr write
+   usb_device                                 open read setattr
+   usbaccessory_device                        open read setattr
+   userdata_block_device                      open read setattr
+   vcs_device                                 open read setattr
+   vdc_tmpfs                                  relabelto
+   video_device                               open read setattr
+   vold_data_file                             relabelto
+   vold_device                                open read setattr
+   vold_socket                                relabelto
+   vold_tmpfs                                 relabelto
+   vpn_data_file                              relabelto
+   wallpaper_file                             relabelto
+   watchdog_device                            open read setattr
+   wifi_data_file                             relabelto
+   wpa_socket                                 relabelto
+   wpa_tmpfs                                  relabelto
+   zero_device                                append getattr ioctl lock open read setattr write
+   zoneinfo_data_file                         relabelto
+   zygote_socket                              relabelto
+   zygote_tmpfs                               relabelto
+
+== allow dir
+   adb_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   adb_keys_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   adbd_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   anr_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   ap_log_srv_tmpfs                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   apk_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   apk_private_data_file                      add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   apk_private_tmp_file                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   apk_tmp_file                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   asec_apk_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   asec_image_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   asec_public_file                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   atproxy_socket                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   atproxy_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   audio_data_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   backup_data_file                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bcu_cpufreqrel_tmpfs                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   binfmt_miscfs                              open read search setattr
+   block_device                               open read search write
+   bluetooth_data_file                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bluetooth_efs_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bluetooth_proc                             open read search setattr
+   bluetooth_socket                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bluetooth_tmpfs                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bootanim_tmpfs                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   bootchart_data_file                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   cache_backup_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   cache_file                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   camera_data_file                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   cgroup                                     add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   config_file                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   contextmount_type                          getattr ioctl open read search
+   coredump_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   cpuctl_device                              create mounton
+   dalvikcache_data_file                      add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dalvikcache_profiles_data_file             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   data_sensors_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   debugfs                                    getattr ioctl open read search setattr
+   debuggerd_tmpfs                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   demoapp_file                               create mounton open read relabelto search setattr
+   dev_type                                   add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   device                                     mounton open read relabelto search setattr
+   devpts                                     open read search setattr
+   dhcp_data_file                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dhcp_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dnsmasq_script_data_file                   add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dnsmasq_script_tmpfs                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dnsproxyd_socket                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   domain                                     getattr ioctl open read search
+   dpstmgr_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   drm_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   drmserver_socket                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   drmserver_tmpfs                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dts_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dtshpxservice_tmpfs                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dumpstate_socket                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   dumpstate_tmpfs                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   ecryptfs                                   open read search setattr
+   efs_file                                   add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   factory_file                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   fg_conf_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   fingerprintd_data_file                     add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   fingerprintd_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   fs_type                                    getattr
+   fsck_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   functionfs                                 open read search setattr
+   fwmarkd_socket                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gatekeeper_data_file                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gatekeeperd_tmpfs                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gps_control                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gps_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gps_socket                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   gpsd_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   hci_attach_tmpfs                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   hdcpd_data_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   hdcpd_tmpfs                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   heapdump_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   init                                       getattr ioctl open read search
+   init_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   inotify                                    getattr ioctl open read search setattr
+   inputflinger_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   install_data_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   install_recovery_tmpfs                     add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   installd_socket                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   installd_tmpfs                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   isolated_app_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   itux_data_file                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   keychain_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   keystore_data_file                         create getattr ioctl open read relabelto search setattr
+   keystore_tmpfs                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   labeledfs                                  open read search setattr
+   lmkd_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   lmkd_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   log_device                                 search
+   log_file                                   add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   logd_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   logd_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   logdr_socket                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   logdw_socket                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   logtoold_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mdns_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mdnsd_socket                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mdnsd_tmpfs                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   media_data_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   media_rw_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mediaserver_tmpfs                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   misc_logd_file                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   misc_user_data_file                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mmgr_app_tmpfs                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mmgr_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mmgr_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mnt_expand_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mnt_media_rw_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mnt_media_rw_stub_file                     add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mnt_user_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   modem_fw_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mqueue                                     open read search setattr
+   mtp_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mtpd_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   mts_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   net_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   netd_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   netd_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   nfc_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   nfc_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   nvm_ctl_socket                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   nvm_server_tmpfs                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   perfprofd_data_file                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   pipefs                                     open read search setattr
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   proc                                       getattr ioctl mounton open read search setattr
+   proc_bluetooth_writable                    open read search setattr
+   proc_cpuinfo                               open read search setattr
+   proc_drop_caches                           open read search setattr
+   proc_net                                   getattr ioctl open read search setattr
+   proc_security                              open read search setattr
+   proc_sysrq                                 open read search setattr
+   proc_uid_cputime_removeuid                 open read search setattr
+   proc_uid_cputime_showstat                  open read search setattr
+   property_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rename reparent rmdir search setattr write
+   property_socket                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   pstorefs                                   mounton open read search setattr
+   pvrsrvctl_tmpfs                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   qtaguid_proc                               open read search setattr
+   racoon_socket                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   racoon_tmpfs                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   radio_data_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   radio_tmpfs                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   resourcecache_data_file                    add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   rfid_monzaxd_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   rild_debug_socket                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   rild_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   rild_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   rootfs                                     add_name create getattr ioctl mounton open read remove_name rename reparent rmdir search setattr write
+   sap_uim_socket                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sdcard_internal                            add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   security_file                              create getattr ioctl open read relabelto search setattr
+   selinuxfs                                  getattr ioctl open read search setattr
+   sensorhubd_file                            add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sensorhubd_socket                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sensorhubd_tmpfs                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sensors_config_tmpfs                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sepfs                                      open read search setattr
+   servicemanager_tmpfs                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   shared_relro_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   shared_relro_tmpfs                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   shell_data_file                            add_name create getattr ioctl open read relabelto search setattr write
+   shell_tmpfs                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   shm                                        open read search setattr
+   socket_device                              getattr ioctl open read relabelto search
+   sockfs                                     open read search setattr
+   storage_file                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   storage_stub_file                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   surfaceflinger_cache_file                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   surfaceflinger_tmpfs                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   sysfs                                      getattr ioctl mounton open read relabelfrom relabelto search setattr
+   sysfs_autosuspend_enable                   open read search setattr
+   sysfs_bluetooth_writable                   open read search setattr
+   sysfs_camflashctrl                         open read search setattr
+   sysfs_cclimit                              open read search setattr
+   sysfs_devices_system_cpu                   getattr ioctl open read search setattr
+   sysfs_drm_resource                         open read search setattr
+   sysfs_gpio_value                           open read search setattr
+   sysfs_hsic_enable                          open read search setattr
+   sysfs_hwmon_control                        open read search setattr
+   sysfs_lowmemorykiller                      open read search setattr
+   sysfs_nfc_power_writable                   open read search setattr
+   sysfs_spi_control                          open read search setattr
+   sysfs_thermal_management                   open read search setattr
+   sysfs_type                                 getattr ioctl open read relabelto search
+   sysfs_wake_lock                            open read search setattr
+   sysfs_writable                             open read search setattr
+   system_app_data_file                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   system_app_tmpfs                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   system_data_file                           add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   system_file                                getattr ioctl open read search
+   system_ndebug_socket                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   system_server_tmpfs                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   system_wpa_socket                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   systemkeys_data_file                       add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   tee_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   tee_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   themepack_exchange_file                    add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   themepack_module_file                      add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   thermal_socket                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   tmpfs                                      add_name create getattr ioctl mounton open read relabelfrom remove_name rename reparent rmdir search setattr write
+   tombstone_data_file                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   toolbox_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   tzdatacheck_tmpfs                          add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   ueventd_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   uncrypt_tmpfs                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   unencrypted_data_file                      add_name create getattr ioctl open read relabelfrom relabelto remove_name rename reparent rmdir search setattr write
+   unlabeled                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rename reparent rmdir search setattr write
+   untrusted_app_devpts                       open read search setattr
+   untrusted_app_tmpfs                        add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   usbfs                                      open read search setattr
+   usermodehelper                             open read search setattr
+   vdc_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   vold_data_file                             create getattr ioctl open read relabelto search setattr
+   vold_socket                                add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   vold_tmpfs                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   vpn_data_file                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   wallpaper_file                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   wifi_data_file                             add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   wpa_socket                                 add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   wpa_tmpfs                                  add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   zoneinfo_data_file                         add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   zygote_socket                              add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+   zygote_tmpfs                               add_name create getattr ioctl open read relabelfrom relabelto remove_name rmdir search setattr write
+
+== allow fd
+   adbd                                       use
+   init                                       use
+   kernel                                     use
+   system_server                              use
+
+== allow fifo_file
+   adb_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   adb_keys_file                              create getattr open read relabelfrom relabelto setattr unlink
+   adbd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   anr_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   ap_log_srv_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   apk_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   apk_private_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   apk_private_tmp_file                       create getattr open read relabelfrom relabelto setattr unlink
+   apk_tmp_file                               create getattr open read relabelfrom relabelto setattr unlink
+   asec_apk_file                              create getattr open read relabelfrom relabelto setattr unlink
+   asec_image_file                            create getattr open read relabelfrom relabelto setattr unlink
+   asec_public_file                           create getattr open read relabelfrom relabelto setattr unlink
+   atproxy_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   atproxy_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   audio_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   backup_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   bcu_cpufreqrel_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_efs_file                         create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   bootanim_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   bootchart_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   cache_backup_file                          create getattr open read relabelfrom relabelto setattr unlink
+   cache_file                                 create getattr open read relabelfrom relabelto setattr unlink
+   camera_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   config_file                                create getattr open read relabelfrom relabelto setattr unlink
+   contextmount_type                          getattr ioctl lock open read
+   coredump_file                              create getattr open read relabelfrom relabelto setattr unlink
+   dalvikcache_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   dalvikcache_profiles_data_file             create getattr open read relabelfrom relabelto setattr unlink
+   data_sensors_file                          create getattr open read relabelfrom relabelto setattr unlink
+   debuggerd_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   dhcp_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   dhcp_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   dnsmasq_script_data_file                   create getattr open read relabelfrom relabelto setattr unlink
+   dnsmasq_script_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   dnsproxyd_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   dpstmgr_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   drm_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   drmserver_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   drmserver_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   dts_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   dtshpxservice_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   dumpstate_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   dumpstate_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   efs_file                                   create getattr open read relabelfrom relabelto setattr unlink
+   factory_file                               create getattr open read relabelfrom relabelto setattr unlink
+   fg_conf_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   fingerprintd_data_file                     create getattr open read relabelfrom relabelto setattr unlink
+   fingerprintd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   fsck_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   fwmarkd_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   gatekeeper_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   gatekeeperd_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   gps_control                                create getattr open read relabelfrom relabelto setattr unlink
+   gps_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   gps_socket                                 create getattr open read relabelfrom relabelto setattr unlink
+   gpsd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   hci_attach_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   hdcpd_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   hdcpd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   heapdump_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   init                                       append getattr ioctl lock open read write
+   init_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   inputflinger_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   install_data_file                          create getattr open read relabelfrom relabelto setattr unlink
+   install_recovery_tmpfs                     create getattr open read relabelfrom relabelto setattr unlink
+   installd_socket                            create getattr open read relabelfrom relabelto setattr unlink
+   installd_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   isolated_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   itux_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   keychain_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   keystore_data_file                         relabelto
+   keystore_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   lmkd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   lmkd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   log_file                                   create getattr open read relabelfrom relabelto setattr unlink
+   logd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   logd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   logdr_socket                               create getattr open read relabelfrom relabelto setattr unlink
+   logdw_socket                               create getattr open read relabelfrom relabelto setattr unlink
+   logtoold_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mdns_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   mdnsd_socket                               create getattr open read relabelfrom relabelto setattr unlink
+   mdnsd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   media_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   media_rw_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mediaserver_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   misc_logd_file                             create getattr open read relabelfrom relabelto setattr unlink
+   misc_user_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   mmgr_app_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   mmgr_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   mmgr_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   mnt_expand_file                            create getattr open read relabelfrom relabelto setattr unlink
+   mnt_media_rw_file                          create getattr open read relabelfrom relabelto setattr unlink
+   mnt_media_rw_stub_file                     create getattr open read relabelfrom relabelto setattr unlink
+   mnt_user_file                              create getattr open read relabelfrom relabelto setattr unlink
+   modem_fw_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mtp_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   mtpd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   mts_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   net_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   netd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   netd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   nfc_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   nfc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   nvm_ctl_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   nvm_server_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   perfprofd_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   property_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   property_socket                            create getattr open read relabelfrom relabelto setattr unlink
+   pvrsrvctl_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   racoon_socket                              create getattr open read relabelfrom relabelto setattr unlink
+   racoon_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink
+   radio_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   radio_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   resourcecache_data_file                    create getattr open read relabelfrom relabelto setattr unlink
+   rfid_monzaxd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   rild_debug_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   rild_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   rild_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   sap_uim_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   security_file                              relabelto
+   sensorhubd_file                            create getattr open read relabelfrom relabelto setattr unlink
+   sensorhubd_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   sensorhubd_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   sensors_config_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   servicemanager_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   shared_relro_file                          create getattr open read relabelfrom relabelto setattr unlink
+   shared_relro_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   shell_data_file                            relabelto
+   shell_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   storage_file                               create getattr open read relabelfrom relabelto setattr unlink
+   storage_stub_file                          create getattr open read relabelfrom relabelto setattr unlink
+   surfaceflinger_cache_file                  create getattr open read relabelfrom relabelto setattr unlink
+   surfaceflinger_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   system_app_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   system_app_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   system_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   system_ndebug_socket                       create getattr open read relabelfrom relabelto setattr unlink
+   system_server_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   system_wpa_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   systemkeys_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   tee_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   tee_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   themepack_exchange_file                    create getattr open read relabelfrom relabelto setattr unlink
+   themepack_module_file                      create getattr open read relabelfrom relabelto setattr unlink
+   thermal_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   tombstone_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   toolbox_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   tzdatacheck_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   ueventd_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   uncrypt_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   unencrypted_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   unlabeled                                  append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   untrusted_app_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   vdc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   vold_data_file                             relabelto
+   vold_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   vold_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   vpn_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   wallpaper_file                             create getattr open read relabelfrom relabelto setattr unlink
+   wifi_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   wpa_socket                                 create getattr open read relabelfrom relabelto setattr unlink
+   wpa_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   zoneinfo_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   zygote_socket                              create getattr open read relabelfrom relabelto setattr unlink
+   zygote_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink
+
+== allow file
+   adb_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   adb_keys_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   adbd_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   anr_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   ap_log_srv_exec                            execute getattr open read
+   ap_log_srv_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink write
+   apk_data_file                              create getattr ioctl lock open read relabelfrom relabelto setattr unlink write
+   apk_private_data_file                      create getattr open read relabelfrom relabelto setattr unlink write
+   apk_private_tmp_file                       create getattr open read relabelfrom relabelto setattr unlink write
+   apk_tmp_file                               create getattr open read relabelfrom relabelto setattr unlink write
+   asec_apk_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   asec_image_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   asec_public_file                           create getattr ioctl lock open read relabelfrom relabelto setattr unlink write
+   atproxy_exec                               execute getattr open read
+   atproxy_socket                             create getattr open read relabelfrom relabelto setattr unlink write
+   atproxy_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   audio_data_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   backup_data_file                           create getattr open read relabelfrom relabelto setattr unlink write
+   bcu_cpufreqrel_exec                        execute getattr open read
+   bcu_cpufreqrel_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink write
+   bd_prov_exec                               execute getattr open read
+   binfmt_miscfs                              open read setattr write
+   bluetooth_data_file                        create getattr open read relabelfrom relabelto setattr unlink write
+   bluetooth_efs_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   bluetooth_proc                             open read setattr
+   bluetooth_socket                           create getattr open read relabelfrom relabelto setattr unlink write
+   bluetooth_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink write
+   bootanim_exec                              execute getattr open read
+   bootanim_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink write
+   bootchart_data_file                        create getattr open read relabelfrom relabelto setattr unlink write
+   cache_backup_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   cache_file                                 create getattr open read relabelfrom relabelto setattr unlink write
+   camera_data_file                           create getattr open read relabelfrom relabelto setattr unlink write
+   cgroup                                     append getattr ioctl lock open read setattr write
+   config_file                                create getattr open read relabelfrom relabelto setattr unlink write
+   contextmount_type                          getattr ioctl lock open read
+   coredump_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   dalvikcache_data_file                      create getattr ioctl lock open read relabelfrom relabelto setattr unlink write
+   dalvikcache_profiles_data_file             create getattr open read relabelfrom relabelto setattr unlink write
+   data_sensors_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   debugfs                                    append open read setattr write
+   debuggerd_exec                             execute getattr open read
+   debuggerd_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink write
+   demoapp_file                               getattr open read relabelto setattr
+   device                                     append create getattr ioctl lock open read rename setattr unlink write
+   devpts                                     open read setattr
+   dhcp_data_file                             create getattr open read relabelfrom relabelto setattr unlink write
+   dhcp_exec                                  execute getattr open read
+   dhcp_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   dnsmasq_script_data_file                   create getattr open read relabelfrom relabelto setattr unlink write
+   dnsmasq_script_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink write
+   dnsproxyd_socket                           create getattr open read relabelfrom relabelto setattr unlink write
+   domain                                     getattr ioctl lock open read
+   dpstmgr_exec                               execute getattr open read
+   dpstmgr_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   drm_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   drmserver_exec                             execute getattr open read
+   drmserver_socket                           create getattr open read relabelfrom relabelto setattr unlink write
+   drmserver_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink write
+   dts_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   dtshpxservice_exec                         execute getattr open read
+   dtshpxservice_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink write
+   dumpstate_exec                             execute getattr open read
+   dumpstate_socket                           create getattr open read relabelfrom relabelto setattr unlink write
+   dumpstate_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink write
+   ecryptfs                                   open read setattr
+   efs_file                                   create getattr open read relabelfrom relabelto setattr unlink write
+   factory_file                               create getattr open read relabelfrom relabelto setattr unlink write
+   fg_conf_exec                               execute getattr open read
+   fg_conf_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   fingerprintd_data_file                     create getattr open read relabelfrom relabelto setattr unlink write
+   fingerprintd_exec                          execute getattr open read
+   fingerprintd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   fsck_exec                                  execute getattr open read
+   fsck_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   fscklogs                                   append create getattr ioctl lock open read rename setattr unlink write
+   functionfs                                 open read setattr
+   fw_switch_exec                             execute execute_no_trans getattr open read
+   fwmarkd_socket                             create getattr open read relabelfrom relabelto setattr unlink write
+   gatekeeper_data_file                       create getattr open read relabelfrom relabelto setattr unlink write
+   gatekeeperd_exec                           execute getattr open read
+   gatekeeperd_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink write
+   gps_control                                create getattr open read relabelfrom relabelto setattr unlink write
+   gps_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   gps_socket                                 create getattr open read relabelfrom relabelto setattr unlink write
+   gpsd_exec                                  execute getattr open read
+   gpsd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   grep_exec                                  execute execute_no_trans getattr open read
+   hci_attach_exec                            execute getattr open read
+   hci_attach_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink write
+   hdcpd_data_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   hdcpd_exec                                 execute getattr open read
+   hdcpd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink write
+   heapdump_data_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   info_setting_exec                          execute execute_no_trans getattr open read
+   init                                       append getattr ioctl lock open read write
+   init_exec                                  entrypoint execute getattr open read
+   init_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   inotify                                    getattr ioctl lock open read setattr
+   inputflinger_exec                          execute getattr open read
+   inputflinger_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   install_data_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   install_recovery_exec                      execute getattr open read
+   install_recovery_tmpfs                     create getattr open read relabelfrom relabelto setattr unlink write
+   installd_exec                              execute getattr open read
+   installd_socket                            create getattr open read relabelfrom relabelto setattr unlink write
+   installd_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink write
+   isolated_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   itux_data_file                             create getattr open read relabelfrom relabelto setattr unlink write
+   keychain_data_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   keystore_data_file                         getattr relabelto
+   keystore_exec                              execute getattr open read
+   keystore_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink write
+   labeledfs                                  open read setattr
+   lmkd_exec                                  execute getattr open read
+   lmkd_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   lmkd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   log_file                                   append create getattr open read relabelfrom relabelto rename setattr unlink write
+   logcat_exec                                execute getattr open read
+   logd_exec                                  execute getattr open read
+   logd_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   logd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   logdr_socket                               create getattr open read relabelfrom relabelto setattr unlink write
+   logdw_socket                               create getattr open read relabelfrom relabelto setattr unlink write
+   logtoold_data_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   logtoold_exec                              execute execute_no_trans getattr open read
+   mdns_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   mdnsd_exec                                 execute getattr open read
+   mdnsd_socket                               create getattr open read relabelfrom relabelto setattr unlink write
+   mdnsd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink write
+   media_data_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   media_rw_data_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   mediaserver_exec                           execute getattr open read
+   mediaserver_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink write
+   misc_logd_file                             create getattr open read relabelfrom relabelto setattr unlink write
+   misc_user_data_file                        create getattr open read relabelfrom relabelto setattr unlink write
+   mmgr_app_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink write
+   mmgr_exec                                  execute getattr open read
+   mmgr_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   mmgr_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   mnt_expand_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   mnt_media_rw_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   mnt_media_rw_stub_file                     create getattr open read relabelfrom relabelto setattr unlink write
+   mnt_user_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   modem_fw_data_file                         create getattr open read relabelfrom relabelto setattr unlink write
+   mqueue                                     open read setattr
+   mtp_exec                                   execute getattr open read
+   mtp_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   mtpd_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   mts_exec                                   execute getattr open read
+   mts_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   net_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   netd_exec                                  execute getattr open read
+   netd_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   netd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   nfc_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   nfc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   nvm_ctl_socket                             create getattr open read relabelfrom relabelto setattr unlink write
+   nvm_server_exec                            execute getattr open read
+   nvm_server_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink write
+   perfprofd_data_file                        create getattr open read relabelfrom relabelto setattr unlink write
+   pipefs                                     open read setattr
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   proc                                       append getattr ioctl lock open read setattr write
+   proc_bluetooth_writable                    open read setattr
+   proc_cpuinfo                               getattr ioctl lock open read setattr
+   proc_drop_caches                           open read setattr
+   proc_net                                   append getattr ioctl lock open read setattr write
+   proc_security                              append getattr ioctl lock open read setattr write
+   proc_sysrq                                 append open read setattr write
+   proc_uid_cputime_removeuid                 open read setattr
+   proc_uid_cputime_showstat                  open read setattr
+   properties_device                          getattr ioctl lock open read relabelto
+   property_data_file                         append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   property_socket                            create getattr open read relabelfrom relabelto setattr unlink write
+   pstorefs                                   getattr ioctl lock open read setattr
+   pvrsrvctl_exec                             execute getattr open read
+   pvrsrvctl_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink write
+   qtaguid_proc                               open read setattr
+   racoon_exec                                execute getattr open read
+   racoon_socket                              create getattr open read relabelfrom relabelto setattr unlink write
+   racoon_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink write
+   radio_data_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   radio_device                               relabelto setattr
+   radio_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink write
+   resourcecache_data_file                    create getattr open read relabelfrom relabelto setattr unlink write
+   rfid_monzaxd_exec                          execute getattr open read
+   rfid_monzaxd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   rild_debug_socket                          create getattr open read relabelfrom relabelto setattr unlink write
+   rild_exec                                  execute getattr open read
+   rild_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   rild_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   rootfs                                     execute getattr ioctl lock open read relabelfrom
+   sap_uim_socket                             create getattr open read relabelfrom relabelto setattr unlink write
+   sdcard_internal                            append create getattr ioctl lock open read rename setattr unlink write
+   security_file                              getattr ioctl lock open read relabelto
+   selinuxfs                                  append getattr ioctl lock open read setattr write
+   sensorhubd_exec                            execute getattr open read
+   sensorhubd_file                            create getattr open read relabelfrom relabelto setattr unlink write
+   sensorhubd_socket                          create getattr open read relabelfrom relabelto setattr unlink write
+   sensorhubd_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink write
+   sensors_config_exec                        execute execute_no_trans getattr open read
+   sensors_config_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink write
+   sepfs                                      append getattr ioctl lock open read setattr write
+   servicemanager_exec                        execute getattr open read
+   servicemanager_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink write
+   shared_relro_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   shared_relro_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink write
+   shell_data_file                            create getattr open read relabelto write
+   shell_exec                                 execute getattr open read
+   shell_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink write
+   shm                                        open read setattr
+   sockfs                                     open read setattr
+   storage_file                               create getattr open read relabelfrom relabelto setattr unlink write
+   storage_stub_file                          create getattr open read relabelfrom relabelto setattr unlink write
+   surfaceflinger_cache_file                  create getattr open read relabelfrom relabelto setattr unlink write
+   surfaceflinger_exec                        execute getattr open read
+   surfaceflinger_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink write
+   sysfs                                      getattr ioctl lock open read relabelfrom relabelto setattr
+   sysfs_autosuspend_enable                   open read setattr
+   sysfs_bluetooth_writable                   open read setattr
+   sysfs_camflashctrl                         open read setattr
+   sysfs_cclimit                              open read setattr
+   sysfs_devices_system_cpu                   getattr ioctl lock open read setattr
+   sysfs_drm_resource                         open read setattr
+   sysfs_gpio_value                           open read setattr
+   sysfs_hsic_enable                          open read setattr
+   sysfs_hwmon_control                        open read setattr
+   sysfs_lowmemorykiller                      open read setattr
+   sysfs_nfc_power_writable                   open read setattr
+   sysfs_spi_control                          open read setattr
+   sysfs_thermal_management                   open read setattr
+   sysfs_type                                 append open relabelto write
+   sysfs_wake_lock                            open read setattr
+   sysfs_writable                             open read setattr
+   system_app_data_file                       create getattr open read relabelfrom relabelto setattr unlink write
+   system_app_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink write
+   system_data_file                           create getattr open read relabelfrom relabelto setattr unlink write
+   system_file                                execute getattr ioctl lock open read
+   system_ndebug_socket                       create getattr open read relabelfrom relabelto setattr unlink write
+   system_server_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink write
+   system_wpa_socket                          create getattr open read relabelfrom relabelto setattr unlink write
+   systemkeys_data_file                       create getattr open read relabelfrom relabelto setattr unlink write
+   tee_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   tee_exec                                   execute getattr open read
+   tee_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   themepack_exchange_file                    create getattr open read relabelfrom relabelto setattr unlink write
+   themepack_module_file                      create getattr open read relabelfrom relabelto setattr unlink write
+   thermal_socket                             create getattr open read relabelfrom relabelto setattr unlink write
+   tmpfs                                      getattr open read relabelfrom setattr unlink
+   tombstone_data_file                        create getattr open read relabelfrom relabelto setattr unlink write
+   toolbox_exec                               execute getattr open read
+   toolbox_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   tzdatacheck_exec                           execute getattr open read
+   tzdatacheck_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink write
+   ueventd_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   uncrypt_exec                               execute getattr open read
+   uncrypt_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink write
+   unencrypted_data_file                      create getattr open read relabelfrom relabelto setattr unlink write
+   unlabeled                                  append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   untrusted_app_devpts                       open read setattr
+   untrusted_app_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink write
+   usbfs                                      open read setattr
+   usermodehelper                             append getattr ioctl lock open read setattr write
+   vdc_exec                                   execute getattr open read
+   vdc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   vold_data_file                             getattr relabelto
+   vold_exec                                  execute getattr open read
+   vold_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   vold_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink write
+   voucher_exec                               execute execute_no_trans getattr open read
+   vpn_data_file                              create getattr open read relabelfrom relabelto setattr unlink write
+   wallpaper_file                             create getattr open read relabelfrom relabelto setattr unlink write
+   wifi_data_file                             create getattr open read relabelfrom relabelto setattr unlink write
+   wifi_init_exec                             execute execute_no_trans getattr open read
+   wifi_mac_exec                              execute execute_no_trans getattr open read
+   wl_exec                                    execute execute_no_trans getattr open read
+   wlan_prov_exec                             execute getattr open read
+   wpa_exec                                   execute getattr open read
+   wpa_socket                                 create getattr open read relabelfrom relabelto setattr unlink write
+   wpa_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink write
+   zoneinfo_data_file                         create getattr ioctl lock open read relabelfrom relabelto setattr unlink write
+   zygote_exec                                execute getattr open read
+   zygote_socket                              create getattr open read relabelfrom relabelto setattr unlink write
+   zygote_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink write
+
+== allow filesystem
+   config_file                                mount relabelfrom relabelto
+   contextmount_type                          relabelto
+   factory_file                               mount relabelfrom relabelto
+   fs_type                                    <perm11> <perm12> <perm13> <perm14> <perm15> <perm16> <perm17> <perm18> <perm19> <perm20> <perm21> <perm22> <perm23> <perm24> <perm25> <perm26> <perm27> <perm28> <perm29> <perm30> <perm31> <perm32> associate getattr mount quotaget quotamod relabelfrom remount transition unmount
+   log_file                                   mount relabelfrom relabelto
+   unlabeled                                  <perm11> <perm12> <perm13> <perm14> <perm15> <perm16> <perm17> <perm18> <perm19> <perm20> <perm21> <perm22> <perm23> <perm24> <perm25> <perm26> <perm27> <perm28> <perm29> <perm30> <perm31> <perm32> associate getattr mount quotaget quotamod relabelfrom remount transition unmount
+
+== allow key
+   init                                       search setattr write
+   kernel                                     search
+   vold                                       search
+
+== allow lnk_file
+   adb_data_file                              create getattr relabelfrom relabelto setattr unlink
+   adb_keys_file                              create getattr relabelfrom relabelto setattr unlink
+   adbd_socket                                create getattr relabelfrom relabelto setattr unlink
+   anr_data_file                              create getattr relabelfrom relabelto setattr unlink
+   ap_log_srv_tmpfs                           create getattr relabelfrom relabelto setattr unlink
+   apk_data_file                              create getattr ioctl lock open read relabelfrom relabelto setattr unlink
+   apk_private_data_file                      create getattr relabelfrom relabelto setattr unlink
+   apk_private_tmp_file                       create getattr relabelfrom relabelto setattr unlink
+   apk_tmp_file                               create getattr relabelfrom relabelto setattr unlink
+   asec_apk_file                              create getattr relabelfrom relabelto setattr unlink
+   asec_image_file                            create getattr relabelfrom relabelto setattr unlink
+   asec_public_file                           create getattr relabelfrom relabelto setattr unlink
+   atproxy_socket                             create getattr relabelfrom relabelto setattr unlink
+   atproxy_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   audio_data_file                            create getattr relabelfrom relabelto setattr unlink
+   backup_data_file                           create getattr relabelfrom relabelto setattr unlink
+   bcu_cpufreqrel_tmpfs                       create getattr relabelfrom relabelto setattr unlink
+   bluetooth_data_file                        create getattr relabelfrom relabelto setattr unlink
+   bluetooth_efs_file                         create getattr relabelfrom relabelto setattr unlink
+   bluetooth_socket                           create getattr relabelfrom relabelto setattr unlink
+   bluetooth_tmpfs                            create getattr relabelfrom relabelto setattr unlink
+   bootanim_tmpfs                             create getattr relabelfrom relabelto setattr unlink
+   bootchart_data_file                        create getattr relabelfrom relabelto setattr unlink
+   cache_backup_file                          create getattr relabelfrom relabelto setattr unlink
+   cache_file                                 create getattr ioctl lock open read relabelfrom relabelto setattr unlink
+   camera_data_file                           create getattr relabelfrom relabelto setattr unlink
+   cgroup                                     getattr ioctl lock open read
+   config_file                                create getattr relabelfrom relabelto setattr unlink
+   contextmount_type                          getattr ioctl lock open read
+   coredump_file                              create getattr relabelfrom relabelto setattr unlink
+   dalvikcache_data_file                      create getattr relabelfrom relabelto setattr unlink
+   dalvikcache_profiles_data_file             create getattr relabelfrom relabelto setattr unlink
+   data_sensors_file                          create getattr relabelfrom relabelto setattr unlink
+   debuggerd_tmpfs                            create getattr relabelfrom relabelto setattr unlink
+   demoapp_file                               relabelto
+   dev_type                                   create getattr ioctl lock open read
+   dhcp_data_file                             create getattr relabelfrom relabelto setattr unlink
+   dhcp_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   dnsmasq_script_data_file                   create getattr relabelfrom relabelto setattr unlink
+   dnsmasq_script_tmpfs                       create getattr relabelfrom relabelto setattr unlink
+   dnsproxyd_socket                           create getattr relabelfrom relabelto setattr unlink
+   domain                                     getattr ioctl lock open read
+   dpstmgr_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   drm_data_file                              create getattr relabelfrom relabelto setattr unlink
+   drmserver_socket                           create getattr relabelfrom relabelto setattr unlink
+   drmserver_tmpfs                            create getattr relabelfrom relabelto setattr unlink
+   dts_data_file                              create getattr relabelfrom relabelto setattr unlink
+   dtshpxservice_tmpfs                        create getattr relabelfrom relabelto setattr unlink
+   dumpstate_socket                           create getattr relabelfrom relabelto setattr unlink
+   dumpstate_tmpfs                            create getattr relabelfrom relabelto setattr unlink
+   efs_file                                   create getattr relabelfrom relabelto setattr unlink
+   factory_file                               create getattr relabelfrom relabelto setattr unlink
+   fg_conf_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   fingerprintd_data_file                     create getattr relabelfrom relabelto setattr unlink
+   fingerprintd_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   fsck_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   fwmarkd_socket                             create getattr relabelfrom relabelto setattr unlink
+   gatekeeper_data_file                       create getattr relabelfrom relabelto setattr unlink
+   gatekeeperd_tmpfs                          create getattr relabelfrom relabelto setattr unlink
+   gps_control                                create getattr relabelfrom relabelto setattr unlink
+   gps_data_file                              create getattr relabelfrom relabelto setattr unlink
+   gps_socket                                 create getattr relabelfrom relabelto setattr unlink
+   gpsd_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   hci_attach_tmpfs                           create getattr relabelfrom relabelto setattr unlink
+   hdcpd_data_file                            create getattr relabelfrom relabelto setattr unlink
+   hdcpd_tmpfs                                create getattr relabelfrom relabelto setattr unlink
+   heapdump_data_file                         create getattr relabelfrom relabelto setattr unlink
+   init                                       getattr ioctl lock open read
+   init_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   inotify                                    getattr ioctl lock open read
+   inputflinger_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   install_data_file                          create getattr relabelfrom relabelto setattr unlink
+   install_recovery_tmpfs                     create getattr relabelfrom relabelto setattr unlink
+   installd_socket                            create getattr relabelfrom relabelto setattr unlink
+   installd_tmpfs                             create getattr relabelfrom relabelto setattr unlink
+   isolated_app_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   itux_data_file                             create getattr relabelfrom relabelto setattr unlink
+   keychain_data_file                         create getattr relabelfrom relabelto setattr unlink
+   keystore_data_file                         relabelto
+   keystore_tmpfs                             create getattr relabelfrom relabelto setattr unlink
+   lmkd_socket                                create getattr relabelfrom relabelto setattr unlink
+   lmkd_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   log_file                                   create getattr relabelfrom relabelto setattr unlink
+   logd_socket                                create getattr relabelfrom relabelto setattr unlink
+   logd_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   logdr_socket                               create getattr relabelfrom relabelto setattr unlink
+   logdw_socket                               create getattr relabelfrom relabelto setattr unlink
+   logtoold_data_file                         create getattr relabelfrom relabelto setattr unlink
+   mdns_socket                                create getattr relabelfrom relabelto setattr unlink
+   mdnsd_socket                               create getattr relabelfrom relabelto setattr unlink
+   mdnsd_tmpfs                                create getattr relabelfrom relabelto setattr unlink
+   media_data_file                            create getattr relabelfrom relabelto setattr unlink
+   media_rw_data_file                         create getattr relabelfrom relabelto setattr unlink
+   mediaserver_tmpfs                          create getattr relabelfrom relabelto setattr unlink
+   misc_logd_file                             create getattr relabelfrom relabelto setattr unlink
+   misc_user_data_file                        create getattr relabelfrom relabelto setattr unlink
+   mmgr_app_tmpfs                             create getattr relabelfrom relabelto setattr unlink
+   mmgr_socket                                create getattr relabelfrom relabelto setattr unlink
+   mmgr_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   mnt_expand_file                            create getattr relabelfrom relabelto setattr unlink
+   mnt_media_rw_file                          create getattr relabelfrom relabelto setattr unlink
+   mnt_media_rw_stub_file                     create getattr relabelfrom relabelto setattr unlink
+   mnt_user_file                              create getattr relabelfrom relabelto setattr unlink
+   modem_fw_data_file                         create getattr relabelfrom relabelto setattr unlink
+   mtp_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   mtpd_socket                                create getattr relabelfrom relabelto setattr unlink
+   mts_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   net_data_file                              create getattr relabelfrom relabelto setattr unlink
+   netd_socket                                create getattr relabelfrom relabelto setattr unlink
+   netd_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   nfc_data_file                              create getattr relabelfrom relabelto setattr unlink
+   nfc_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   nvm_ctl_socket                             create getattr relabelfrom relabelto setattr unlink
+   nvm_server_tmpfs                           create getattr relabelfrom relabelto setattr unlink
+   perfprofd_data_file                        create getattr relabelfrom relabelto setattr unlink
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   proc                                       getattr ioctl lock open read
+   proc_net                                   getattr ioctl lock open read
+   property_data_file                         create getattr relabelfrom relabelto setattr unlink
+   property_socket                            create getattr relabelfrom relabelto setattr unlink
+   pvrsrvctl_tmpfs                            create getattr relabelfrom relabelto setattr unlink
+   racoon_socket                              create getattr relabelfrom relabelto setattr unlink
+   racoon_tmpfs                               create getattr relabelfrom relabelto setattr unlink
+   radio_data_file                            create getattr relabelfrom relabelto setattr unlink
+   radio_tmpfs                                create getattr relabelfrom relabelto setattr unlink
+   resourcecache_data_file                    create getattr relabelfrom relabelto setattr unlink
+   rfid_monzaxd_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   rild_debug_socket                          create getattr relabelfrom relabelto setattr unlink
+   rild_socket                                create getattr relabelfrom relabelto setattr unlink
+   rild_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   rootfs                                     create getattr ioctl lock open read setattr unlink
+   sap_uim_socket                             create getattr relabelfrom relabelto setattr unlink
+   security_file                              getattr ioctl lock open read relabelto
+   sensorhubd_file                            create getattr relabelfrom relabelto setattr unlink
+   sensorhubd_socket                          create getattr relabelfrom relabelto setattr unlink
+   sensorhubd_tmpfs                           create getattr relabelfrom relabelto setattr unlink
+   sensors_config_tmpfs                       create getattr relabelfrom relabelto setattr unlink
+   servicemanager_tmpfs                       create getattr relabelfrom relabelto setattr unlink
+   shared_relro_file                          create getattr relabelfrom relabelto setattr unlink
+   shared_relro_tmpfs                         create getattr relabelfrom relabelto setattr unlink
+   shell_data_file                            relabelto
+   shell_tmpfs                                create getattr relabelfrom relabelto setattr unlink
+   storage_file                               create getattr relabelfrom relabelto setattr unlink
+   storage_stub_file                          create getattr relabelfrom relabelto setattr unlink
+   surfaceflinger_cache_file                  create getattr relabelfrom relabelto setattr unlink
+   surfaceflinger_tmpfs                       create getattr relabelfrom relabelto setattr unlink
+   sysfs                                      getattr ioctl lock open read relabelfrom relabelto setattr
+   sysfs_devices_system_cpu                   getattr ioctl lock open read
+   sysfs_type                                 relabelto
+   system_app_data_file                       create getattr relabelfrom relabelto setattr unlink
+   system_app_tmpfs                           create getattr relabelfrom relabelto setattr unlink
+   system_data_file                           create getattr ioctl lock open read relabelfrom relabelto setattr unlink
+   system_file                                getattr ioctl lock open read
+   system_ndebug_socket                       create getattr relabelfrom relabelto setattr unlink
+   system_server_tmpfs                        create getattr relabelfrom relabelto setattr unlink
+   system_wpa_socket                          create getattr relabelfrom relabelto setattr unlink
+   systemkeys_data_file                       create getattr relabelfrom relabelto setattr unlink
+   tee_data_file                              create getattr relabelfrom relabelto setattr unlink
+   tee_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   themepack_exchange_file                    create getattr relabelfrom relabelto setattr unlink
+   themepack_module_file                      create getattr relabelfrom relabelto setattr unlink
+   thermal_socket                             create getattr relabelfrom relabelto setattr unlink
+   tmpfs                                      append create getattr ioctl lock open read rename setattr unlink write
+   tombstone_data_file                        create getattr relabelfrom relabelto setattr unlink
+   toolbox_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   tzdatacheck_tmpfs                          create getattr relabelfrom relabelto setattr unlink
+   ueventd_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   uncrypt_tmpfs                              create getattr relabelfrom relabelto setattr unlink
+   unencrypted_data_file                      create getattr relabelfrom relabelto setattr unlink
+   unlabeled                                  append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   untrusted_app_tmpfs                        create getattr relabelfrom relabelto setattr unlink
+   vdc_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   vold_data_file                             relabelto
+   vold_socket                                create getattr relabelfrom relabelto setattr unlink
+   vold_tmpfs                                 create getattr relabelfrom relabelto setattr unlink
+   vpn_data_file                              create getattr relabelfrom relabelto setattr unlink
+   wallpaper_file                             create getattr relabelfrom relabelto setattr unlink
+   wifi_data_file                             create getattr relabelfrom relabelto setattr unlink
+   wpa_socket                                 create getattr relabelfrom relabelto setattr unlink
+   wpa_tmpfs                                  create getattr relabelfrom relabelto setattr unlink
+   zoneinfo_data_file                         create getattr ioctl lock open read relabelfrom relabelto setattr unlink
+   zygote_socket                              create getattr relabelfrom relabelto setattr unlink
+   zygote_tmpfs                               create getattr relabelfrom relabelto setattr unlink
+
+== allow netlink_kobject_uevent_socket
+   init                                       append bind connect create getattr getopt ioctl lock read setattr setopt shutdown write
+
+== allow netlink_selinux_socket
+   init                                       accept append bind connect create getattr getopt listen lock name_bind read recv_msg recvfrom relabelfrom relabelto send_msg sendto setattr setopt shutdown write
+
+== allow process
+   adbd                                       rlimitinh siginh transition
+   ap_log_srv                                 rlimitinh siginh transition
+   apk_logfs                                  rlimitinh siginh transition
+   asus_init_shell                            rlimitinh siginh transition
+   atproxy                                    rlimitinh siginh transition
+   bcu_cpufreqrel                             rlimitinh siginh transition
+   bluetooth                                  rlimitinh siginh transition
+   bootanim                                   rlimitinh siginh transition
+   config_init                                rlimitinh siginh transition
+   debuggerd                                  rlimitinh sigchld siginh transition
+   dhcp                                       rlimitinh siginh transition
+   domain                                     sigkill
+   dpstmgr                                    rlimitinh siginh transition
+   drmserver                                  rlimitinh siginh transition
+   dtshpxservice                              rlimitinh siginh transition
+   dumpstate                                  rlimitinh siginh transition
+   fg_conf                                    rlimitinh siginh transition
+   fingerprintd                               rlimitinh siginh transition
+   fsck                                       rlimitinh siginh transition
+   gatekeeperd                                rlimitinh siginh transition
+   gpsd                                       rlimitinh siginh transition
+   hci_attach                                 rlimitinh siginh transition
+   hdcpd                                      rlimitinh siginh transition
+   healthd                                    rlimitinh siginh transition
+   init                                       fork getattr getcap getpgid getsched getsession setcap setexec setfscreate setpgid setrlimit setsched setsockcreate sigchld sigkill signal signull sigstop
+   inputflinger                               rlimitinh siginh transition
+   install_recovery                           rlimitinh siginh transition
+   installd                                   rlimitinh siginh transition
+   intel_fw_props                             rlimitinh siginh transition
+   intel_prop                                 rlimitinh siginh transition
+   kernel                                     setsched sigchld
+   keystore                                   rlimitinh siginh transition
+   lmkd                                       rlimitinh siginh transition
+   logd                                       rlimitinh siginh transition
+   mdnsd                                      rlimitinh siginh transition
+   mediaserver                                rlimitinh siginh transition
+   mmgr                                       rlimitinh siginh transition
+   modem_class_main                           rlimitinh siginh transition
+   mtp                                        rlimitinh siginh transition
+   mts                                        rlimitinh siginh transition
+   netd                                       rlimitinh siginh transition
+   nvm_server                                 rlimitinh siginh transition
+   pvrsrvctl                                  rlimitinh siginh transition
+   racoon                                     rlimitinh siginh transition
+   rfid_monzaxd                               rlimitinh siginh transition
+   rfkill_bt                                  rlimitinh siginh transition
+   rild                                       rlimitinh siginh transition
+   sensorhubd                                 rlimitinh siginh transition
+   sensors_config                             rlimitinh siginh transition
+   servicemanager                             rlimitinh siginh transition
+   shell                                      rlimitinh siginh transition
+   slideshow                                  rlimitinh siginh transition
+   surfaceflinger                             rlimitinh siginh transition
+   tee                                        rlimitinh siginh transition
+   thermald                                   rlimitinh siginh transition
+   toolbox                                    rlimitinh siginh transition
+   tzdatacheck                                rlimitinh siginh transition
+   ueventd                                    rlimitinh siginh transition
+   uncrypt                                    rlimitinh siginh transition
+   vdc                                        rlimitinh siginh transition
+   vold                                       rlimitinh siginh transition
+   watchdogd                                  rlimitinh siginh transition
+   wlan_prov                                  rlimitinh siginh transition
+   wpa                                        rlimitinh siginh transition
+   zygote                                     rlimitinh siginh transition
+
+== allow property_service
+   property_type                              set
+   system_radio_prop                          set
+
+== allow security
+   kernel                                     compute_av compute_create
+
+== allow service_manager
+   servicemanager                             list
+
+== allow sock_file
+   adb_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   adb_keys_file                              create getattr open read relabelfrom relabelto setattr unlink
+   adbd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   anr_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   ap_log_srv_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   apk_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   apk_private_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   apk_private_tmp_file                       create getattr open read relabelfrom relabelto setattr unlink
+   apk_tmp_file                               create getattr open read relabelfrom relabelto setattr unlink
+   asec_apk_file                              create getattr open read relabelfrom relabelto setattr unlink
+   asec_image_file                            create getattr open read relabelfrom relabelto setattr unlink
+   asec_public_file                           create getattr open read relabelfrom relabelto setattr unlink
+   atproxy_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   atproxy_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   audio_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   backup_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   bcu_cpufreqrel_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_efs_file                         create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   bluetooth_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   bootanim_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   bootchart_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   cache_backup_file                          create getattr open read relabelfrom relabelto setattr unlink
+   cache_file                                 create getattr open read relabelfrom relabelto setattr unlink
+   camera_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   config_file                                create getattr open read relabelfrom relabelto setattr unlink
+   contextmount_type                          getattr ioctl lock open read
+   coredump_file                              create getattr open read relabelfrom relabelto setattr unlink
+   dalvikcache_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   dalvikcache_profiles_data_file             create getattr open read relabelfrom relabelto setattr unlink
+   data_sensors_file                          create getattr open read relabelfrom relabelto setattr unlink
+   debuggerd_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   dhcp_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   dhcp_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   dnsmasq_script_data_file                   create getattr open read relabelfrom relabelto setattr unlink
+   dnsmasq_script_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   dnsproxyd_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   dpstmgr_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   drm_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   drmserver_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   drmserver_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   dts_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   dtshpxservice_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   dumpstate_socket                           create getattr open read relabelfrom relabelto setattr unlink
+   dumpstate_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   efs_file                                   create getattr open read relabelfrom relabelto setattr unlink
+   factory_file                               create getattr open read relabelfrom relabelto setattr unlink
+   fg_conf_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   fingerprintd_data_file                     create getattr open read relabelfrom relabelto setattr unlink
+   fingerprintd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   fsck_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   fwmarkd_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   gatekeeper_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   gatekeeperd_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   gps_control                                create getattr open read relabelfrom relabelto setattr unlink
+   gps_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   gps_socket                                 create getattr open read relabelfrom relabelto setattr unlink
+   gpsd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   hci_attach_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   hdcpd_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   hdcpd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   heapdump_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   init_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   inputflinger_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   install_data_file                          create getattr open read relabelfrom relabelto setattr unlink
+   install_recovery_tmpfs                     create getattr open read relabelfrom relabelto setattr unlink
+   installd_socket                            create getattr open read relabelfrom relabelto setattr unlink
+   installd_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   isolated_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   itux_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   keychain_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   keystore_data_file                         relabelto
+   keystore_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   lmkd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   lmkd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   log_file                                   create getattr open read relabelfrom relabelto setattr unlink
+   logd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   logd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   logdr_socket                               create getattr open read relabelfrom relabelto setattr unlink write
+   logdw_socket                               create getattr open read relabelfrom relabelto setattr unlink write
+   logtoold_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mdns_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   mdnsd_socket                               create getattr open read relabelfrom relabelto setattr unlink
+   mdnsd_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   media_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   media_rw_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mediaserver_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   misc_logd_file                             create getattr open read relabelfrom relabelto setattr unlink
+   misc_user_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   mmgr_app_tmpfs                             create getattr open read relabelfrom relabelto setattr unlink
+   mmgr_socket                                append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   mmgr_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   mnt_expand_file                            create getattr open read relabelfrom relabelto setattr unlink
+   mnt_media_rw_file                          create getattr open read relabelfrom relabelto setattr unlink
+   mnt_media_rw_stub_file                     create getattr open read relabelfrom relabelto setattr unlink
+   mnt_user_file                              create getattr open read relabelfrom relabelto setattr unlink
+   modem_fw_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   mtp_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   mtpd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   mts_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   net_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   netd_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   netd_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   nfc_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   nfc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   nvm_ctl_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   nvm_server_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   perfprofd_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   platform_app_data_file                     relabelto
+   platform_app_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   property_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   property_socket                            create getattr open read relabelfrom relabelto setattr unlink write
+   pvrsrvctl_tmpfs                            create getattr open read relabelfrom relabelto setattr unlink
+   racoon_socket                              create getattr open read relabelfrom relabelto setattr unlink
+   racoon_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink
+   radio_data_file                            create getattr open read relabelfrom relabelto setattr unlink
+   radio_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   resourcecache_data_file                    create getattr open read relabelfrom relabelto setattr unlink
+   rfid_monzaxd_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   rild_debug_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   rild_socket                                create getattr open read relabelfrom relabelto setattr unlink
+   rild_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   sap_uim_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   security_file                              relabelto
+   sensorhubd_file                            create getattr open read relabelfrom relabelto setattr unlink
+   sensorhubd_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   sensorhubd_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   sensors_config_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   servicemanager_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   shared_relro_file                          create getattr open read relabelfrom relabelto setattr unlink
+   shared_relro_tmpfs                         create getattr open read relabelfrom relabelto setattr unlink
+   shell_data_file                            relabelto
+   shell_tmpfs                                create getattr open read relabelfrom relabelto setattr unlink
+   storage_file                               create getattr open read relabelfrom relabelto setattr unlink
+   storage_stub_file                          create getattr open read relabelfrom relabelto setattr unlink
+   surfaceflinger_cache_file                  create getattr open read relabelfrom relabelto setattr unlink
+   surfaceflinger_tmpfs                       create getattr open read relabelfrom relabelto setattr unlink
+   system_app_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   system_app_tmpfs                           create getattr open read relabelfrom relabelto setattr unlink
+   system_data_file                           create getattr open read relabelfrom relabelto setattr unlink
+   system_ndebug_socket                       create getattr open read relabelfrom relabelto setattr unlink
+   system_server_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   system_wpa_socket                          create getattr open read relabelfrom relabelto setattr unlink
+   systemkeys_data_file                       create getattr open read relabelfrom relabelto setattr unlink
+   tee_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   tee_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   themepack_exchange_file                    create getattr open read relabelfrom relabelto setattr unlink
+   themepack_module_file                      create getattr open read relabelfrom relabelto setattr unlink
+   thermal_socket                             create getattr open read relabelfrom relabelto setattr unlink
+   tombstone_data_file                        create getattr open read relabelfrom relabelto setattr unlink
+   toolbox_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   tzdatacheck_tmpfs                          create getattr open read relabelfrom relabelto setattr unlink
+   ueventd_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   uncrypt_tmpfs                              create getattr open read relabelfrom relabelto setattr unlink
+   unencrypted_data_file                      create getattr open read relabelfrom relabelto setattr unlink
+   unlabeled                                  append create getattr ioctl lock open read relabelfrom relabelto rename setattr unlink write
+   untrusted_app_tmpfs                        create getattr open read relabelfrom relabelto setattr unlink
+   vdc_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   vold_data_file                             relabelto
+   vold_socket                                create getattr open read relabelfrom relabelto setattr unlink write
+   vold_tmpfs                                 create getattr open read relabelfrom relabelto setattr unlink
+   vpn_data_file                              create getattr open read relabelfrom relabelto setattr unlink
+   wallpaper_file                             create getattr open read relabelfrom relabelto setattr unlink
+   wifi_data_file                             create getattr open read relabelfrom relabelto setattr unlink
+   wpa_socket                                 create getattr open read relabelfrom relabelto setattr unlink
+   wpa_tmpfs                                  create getattr open read relabelfrom relabelto setattr unlink
+   zoneinfo_data_file                         create getattr open read relabelfrom relabelto setattr unlink
+   zygote_socket                              create getattr open read relabelfrom relabelto setattr unlink
+   zygote_tmpfs                               create getattr open read relabelfrom relabelto setattr unlink
+
+== allow system
+   kernel                                     module_request syslog_mod syslog_read
+
+== allow udp_socket
+   init                                       create ioctl
+
+== allow unix_dgram_socket
+   domain                                     bind create
+   init                                       append bind connect create getattr getopt ioctl lock read sendto setattr setopt shutdown write
+   logd                                       sendto
+
+== allow unix_stream_socket
+   adbd                                       connectto getattr getopt read shutdown write
+   debuggerd                                  connectto
+   domain                                     bind create
+   init                                       accept append bind connect connectto create getattr getopt ioctl listen lock read setattr setopt shutdown write
+   logd                                       connectto
+   mmgr                                       connectto
+   vold                                       connectto
+
+== allow ioctl-opnum unix_dgram_socket
+   domain                                     ioctl magic=0x54 nr={0x1 0x11 0x13 0x14 0x1b 0x51}]
+
+== allow ioctl-opnum unix_stream_socket
+   domain                                     ioctl magic=0x54 nr={0x1 0x11 0x13 0x14 0x1b 0x51}]
+
+== auditdeny/dontaudit process
+   adbd                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   ap_log_srv                                 <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   apk_logfs                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   asus_init_shell                            <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   atproxy                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   bcu_cpufreqrel                             <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   bluetooth                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   bootanim                                   <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   config_init                                <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   debuggerd                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   dhcp                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   dpstmgr                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   drmserver                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   dtshpxservice                              <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   dumpstate                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   fg_conf                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   fingerprintd                               <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   fsck                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   gatekeeperd                                <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   gpsd                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   hci_attach                                 <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   hdcpd                                      <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   healthd                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   inputflinger                               <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   install_recovery                           <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   installd                                   <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   intel_fw_props                             <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   intel_prop                                 <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   keystore                                   <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   lmkd                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   logd                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   mdnsd                                      <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   mediaserver                                <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   mmgr                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   modem_class_main                           <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   mtp                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   mts                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   netd                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   nvm_server                                 <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   pvrsrvctl                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   racoon                                     <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   rfid_monzaxd                               <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   rfkill_bt                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   rild                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   sensorhubd                                 <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   sensors_config                             <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   servicemanager                             <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   shell                                      <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   slideshow                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   surfaceflinger                             <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   tee                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   thermald                                   <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   toolbox                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   tzdatacheck                                <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   ueventd                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   uncrypt                                    <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   vdc                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   vold                                       <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   watchdogd                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   wlan_prov                                  <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   wpa                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+   zygote                                     <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+
+== typetransition file
+   tmpfs                                      lock relabelto
+
+== typetransition process
+   ap_log_srv_exec                            fork sigkill signal
+   atproxy_exec                               fork getsched sigchld sigkill signal transition
+   bcu_cpufreqrel_exec                        setsched
+   bd_prov_exec                               ptrace transition
+   bootanim_exec                              fork getsched signal sigstop
+   debuggerd_exec                             sigchld sigkill signull sigstop
+   dhcp_exec                                  fork signal signull sigstop
+   dpstmgr_exec                               getsched sigkill signal sigstop transition
+   drmserver_exec                             fork sigchld signal signull sigstop
+   dtshpxservice_exec                         fork ptrace sigchld sigkill signal signull sigstop transition
+   dumpstate_exec                             fork sigchld sigkill signal signull sigstop
+   fg_conf_exec                               fork setsched sigchld sigkill transition
+   fingerprintd_exec                          fork getsched sigchld transition
+   fsck_exec                                  fork getsched ptrace signal sigstop transition
+   gatekeeperd_exec                           getsched ptrace sigchld sigstop transition
+   gpsd_exec                                  fork getsched ptrace sigkill signal
+   hci_attach_exec                            setsched signal transition
+   hdcpd_exec                                 ptrace sigchld signull transition
+   init_exec                                  fork getsched ptrace signal signull
+   inputflinger_exec                          fork ptrace sigchld transition
+   install_recovery_exec                      getsched sigchld signull
+   installd_exec                              getsched
+   keystore_exec                              fork sigchld signal signull sigstop transition
+   lmkd_exec                                  setsched signal sigstop
+   logd_exec                                  fork getsched sigchld signal signull sigstop transition
+   mdnsd_exec                                 getsched ptrace sigkill signal transition
+   mediaserver_exec                           getsched sigkill signal signull
+   mmgr_exec                                  fork getsched sigkill signal sigstop transition
+   mtp_exec                                   sigchld signal transition
+   mts_exec                                   sigkill signal transition
+   netd_exec                                  sigkill signull sigstop
+   nvm_server_exec                            getsched sigstop
+   pvrsrvctl_exec                             ptrace sigkill sigstop
+   racoon_exec                                setsched sigchld sigkill sigstop transition
+   rfid_monzaxd_exec                          sigkill signull
+   rild_exec                                  setsched sigchld signull transition
+   sensorhubd_exec                            sigchld sigkill signull
+   sensors_config_exec                        fork getsched ptrace sigchld signal signull sigstop transition
+   servicemanager_exec                        setsched sigchld signal sigstop
+   shell_exec                                 ptrace sigchld sigkill transition
+   surfaceflinger_exec                        fork getsched ptrace sigchld sigkill signal transition
+   tee_exec                                   fork sigchld signal sigstop transition
+   toolbox_exec                               ptrace sigkill signal signull transition
+   tzdatacheck_exec                           fork ptrace sigkill signal signull sigstop transition
+   uncrypt_exec                               fork ptrace sigchld signal transition
+   vdc_exec                                   sigchld signull sigstop transition
+   vold_exec                                  fork setsched sigchld signull transition
+   wlan_prov_exec                             getsched sigchld sigkill signal transition
+   wpa_exec                                   ptrace signull
+   zygote_exec                                fork sigkill signull sigstop transition

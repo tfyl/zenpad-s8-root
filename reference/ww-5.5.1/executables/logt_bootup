@@ -1,0 +1,229 @@
+#!/system/bin/sh
+
+WRITE_LOG="log -p d -t LogT-logtool_bootup_setting"
+
+set -x
+
+BUILD_TYEP=`getprop ro.build.type`
+
+if [ "$(ls /cache/logtool/cos)" ]; then
+	$WRITE_LOG "Backup cos log ..."
+	if [ -d "/data" ];then
+		if [ -d "/data/coslog" ];then
+			$WRITE_LOG "Delete old cos log"
+			rm -rf /data/coslog/*
+		fi
+		cp -rf /cache/logtool/cos /data/coslog
+		rm -rf /cache/logtool/cos
+	else
+		$WRITE_LOG "/data no exist...."
+	fi
+fi
+
+if [ "$(ls /cache/logtool/ros)" ]; then
+	$WRITE_LOG "Backup ros log ..."
+	if [ -d "/data" ];then
+		if [ -d "/data/roslog" ];then
+			$WRITE_LOG "Delete old ros log"
+			rm -rf /data/roslog/*
+		fi
+		cp -rf /cache/logtool/ros /data/roslog
+		rm -rf /cache/logtool/ros
+	else
+		$WRITE_LOG "/data no exist...."
+	fi
+fi
+
+if [ "$(ls /cache/logtool/pos)" ]; then
+    $WRITE_LOG "Backup ros log ..."
+    if [ -d "/data" ];then
+        if [ -d "/data/poslog" ];then
+            $WRITE_LOG "Delete old ros log"
+            rm -rf /data/poslog/*
+        fi
+        cp -rf /cache/logtool/pos /data/poslog
+        rm -rf /cache/logtool/pos
+    else
+        $WRITE_LOG "/data no exist...."
+    fi
+fi
+
+if [ -d "/cache/logtool/boot" ];then
+    $WRITE_LOG "Dump first boot log"
+    cp -rf /cache/logtool/boot /data/boot
+fi
+
+if [ "0" == "`getprop persist.logtool.pos.logging`" ] && [ "0" == "`getprop persist.logtool.ros.logging`" ] && [ "0" == "`getprop persist.logtool.cos.logging`" ] ;then
+	rm -rf /cache/logtool/pos
+	rm -rf /cache/logtool/ros
+	rm -rf /cache/logtool/cos
+fi
+
+#we wait until LogTool APK install complete
+while [ ! -e "/data/data/com.asus.LogTool/files/logtool-executor.sh" ]
+do
+    #wait
+    if [ "$BUILD_TYEP" == "user" ];then
+        exit 0
+    fi
+    $WRITE_LOG "Waitting LogTool APK install complete ..."
+    sleep 5
+done
+sleep 2
+
+
+# if factory we default enable log
+if [ "$BUILD_TYEP" == "eng" ]; then
+# eng type
+	setprop persist.logtool.logging 1
+	if [ -d "/data" ]; then
+		if [ ! -d "/data/logtool" ] ; then
+			mkdir -p /data/logtool
+		fi
+		if [ ! -e "/data/logtool/logtool_history.txt" ];then
+				echo "TIME\t\t\tEVENT" > /data/logtool/logtool_history.txt
+		fi
+		#backup asus to asus-bootid
+		if [ -d "/data/logtool/asus" ]; then
+			if [ ! -e "/data/logtool/asus/boot_id.txt" ]; then
+	   	   		$WRITE_LOG "No start_time.txt, should not be happend! need Debug!!!!!!"
+				BOOTUP_ID="unknown"
+			else
+				BOOTUP_ID=`cat /data/logtool/asus/boot_id.txt`
+			fi
+			BACKUP_FILE_DIR="/data/logtool/asus-$BOOTUP_ID"
+			i=0
+			IS_EXISTED=1
+			if [ ! -e /data/logtool/backup_list.txt ]; then
+				IS_EXISTED=0
+			fi
+			while [ "1" == "$IS_EXISTED" ]
+			do
+				#check no exist history 
+				N_FACTORY_FILES=`cat /data/logtool/backup_list.txt | busybox wc -l`
+				j=0
+				IS_EXISTED=0
+				while [ "$j" != "$N_FACTORY_FILES" ]
+				do
+					j=$(($j+1))
+					EXIST_FILE_PATH=`cat /data/logtool/backup_list.txt | busybox head -n $j | busybox tail -n 1`
+					# or check file exit, if is, rename, run again
+					if [ "$BACKUP_FILE_DIR" == "$EXIST_FILE_PATH" ] || [ -d $BACKUP_FILE_DIR ]; then
+						IS_EXISTED=1
+						BOOTUP_ID_BACKUP="$BOOTUP_ID-$i"
+						BACKUP_FILE_DIR="/data/logtool/asus-$BOOTUP_ID_BACKUP"
+						i=$(($i+1))
+					fi
+            	done
+			done
+			$WRITE_LOG "backup /data/logtool/asus to $BACKUP_FILE_DIR ..."
+			mv /data/logtool/asus/ $BACKUP_FILE_DIR
+			echo "$BACKUP_FILE_DIR" >> /data/logtool/backup_list.txt
+			sync
+		fi
+		#delete oldest log, rotation = 20
+		N_FACTORY_FILES=`cat /data/logtool/backup_list.txt | busybox wc -l`
+		N_KEEP_FILES=20
+		if [ $N_FACTORY_FILES -gt $N_KEEP_FILES ]; then
+			N_DEL_FILES=$(($N_FACTORY_FILES-$N_KEEP_FILES))
+			j=0
+			while [ "$j" != "$N_DEL_FILES" ]
+			do
+				j=$(($j+1))
+				DELETE_FILE_PATH=`cat /data/logtool/backup_list.txt | busybox head -n $j | busybox tail -n 1`
+				if [ -d $DELETE_FILE_PATH ]; then
+					$WRITE_LOG "Want to delete $DELETE_FILE_PATH folder"
+					busybox rm -rf $DELETE_FILE_PATH
+				fi
+    		done
+		fi
+		BOOTUP_TIME=`timestamp`
+		BOOTUP_ID=`cat /proc/sys/kernel/random/boot_id`
+		echo "$BOOTUP_TIME\t\tBootup Bootid:$BOOTUP_ID" >> /data/logtool/logtool_history.txt
+        mkdir -p /data/logtool/asus
+	    chmod 777 /data/logtool/asus
+		sync
+
+		setprop persist.logtool.klogdog "on"
+		setprop persist.logtool.logdog-logcat "on"
+		setprop persist.logtool.logdog-main "on"
+		setprop persist.logtool.logdog-system "on"
+		setprop persist.logtool.logdog-radio "on"
+		setprop persist.logtool.logdog-events "on"
+
+		setprop logtool.executor.option "minstart"
+		start logtool-executor
+	else
+	    $WRITE_LOG "/data does not exist!"
+	fi
+else
+# not eng type
+	# always backup asus-log
+	# Detect if /data is mounted
+	if [ -d "/data" ]; then
+		if [ -d "/data/logtool" ]; then
+			# 1. record uptime and bootid
+			if [ ! -e "/data/logtool/logtool_history.txt" ];then
+				#no bootup_overview.txt, so create format
+				echo "TIME\t\t\tEVENT" > /data/logtool/logtool_history.txt
+			fi
+			BOOTUP_TIME=`timestamp`
+			BOOTUP_ID=`cat /proc/sys/kernel/random/boot_id`
+			echo "$BOOTUP_TIME\t\tBootup Bootid:$BOOTUP_ID" >> /data/logtool/logtool_history.txt
+		
+			# 2. we backup asus to asus-yymmdd..
+			if [ -d "/data/logtool/asus" ]; then
+				if [ ! -e "/data/logtool/asus/start_logging_time.txt" ]; then
+	   	   			$WRITE_LOG "No start_time.txt, should not be happend! need Debug!!!!!!"
+					START_LOGGING_TIME="unknown"
+				else
+					START_LOGGING_TIME=`cat /data/logtool/asus/start_logging_time.txt`
+				fi
+				BACKUP_FILE_DIR="/data/logtool/asus-$START_LOGGING_TIME"
+				BACKUP_SD_FILE_DIR="/Removable/MicroSD/data/logtool/asus-$START_LOGGING_TIME"
+				i=0
+				while [ -d $BACKUP_FILE_DIR ]
+				do
+					#check file exit, if is, rename
+					BOOTUP_ID_BACKUP="$BOOTUP_ID-$i"
+					BACKUP_FILE_DIR="/data/logtool/asus-$BOOTUP_ID_BACKUP"
+					BACKUP_SD_FILE_DIR="/Removable/MicroSD/data/logtool/asus-$BOOTUP_ID_BACKUP"
+					$WRITE_LOG "rename backup file to $BACKUP_FILE_DIR"
+					i=$(($i+1))
+				done
+				$WRITE_LOG "moving /data/logtool/asus to $BACKUP_FILE_DIR ..."
+				mv /data/logtool/asus/ $BACKUP_FILE_DIR
+				STORAGE_TYPE=`getprop persist.logtool.storage.type`
+				IS_LOGGING=`getprop persist.logtool.logging`
+				if [ "1" == "$IS_LOGGING" ]; then
+					if [ "$STORAGE_TYPE" == "1" ]; then
+						while [ ! -d "/Removable/MicroSD/data/logtool/asus" ]
+						do
+							$WRITE_LOG "Waitting MicroSD card mount complete ..."
+							sleep 3
+						done
+						mv /Removable/MicroSD/data/logtool/asus/ $BACKUP_SD_FILE_DIR
+					fi
+				fi
+				sync
+			fi
+
+		fi #enf of have logtool folder
+
+		IS_LOGGING=`getprop persist.logtool.logging`
+		if [ "1" == "$IS_LOGGING" ]; then
+			$WRITE_LOG "Start a new logging ..."
+			setprop persist.logtool.klogdog "on"
+			setprop persist.logtool.logdog-main "on"
+			setprop persist.logtool.logdog-system "on"
+			setprop persist.logtool.logdog-radio "on"
+			setprop persist.logtool.logdog-events "on"
+
+			setprop logtool.executor.option "minstart"
+			start logtool-executor
+		fi
+
+	else #no /data
+		$WRITE_LOG "/data does not exist!"
+	fi
+fi

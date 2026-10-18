@@ -1,0 +1,242 @@
+===== func 0x31380 .. 0x317b0 =====
+F 31380: push   %ebp
+  31381: push   %edi
+  31382: push   %esi
+  31383: push   %ebx
+  31384: call   251ac <inflateReset@plt+0x85c>
+  31389: add    $0x17c963,%ebx
+  3138f: lea    -0xac(%esp),%esp
+  31396: mov    -0x40(%ebx),%ebp
+  3139c: mov    0xc0(%esp),%esi
+  313a3: mov    0xc4(%esp),%edi
+  313aa: mov    0x0(%ebp),%eax
+  313ad: mov    %eax,0x9c(%esp)
+  313b4: call   31c80 <inflateReset@plt+0xd330>
+  313b9: cmp    %eax,%esi
+  313bb: je     31528 <inflateReset@plt+0xcbd8>
+  313c1: cmp    $0x2,%esi
+  313c4: je     31428 <inflateReset@plt+0xcad8>
+  313c6: mov    %esi,(%esp)
+  313c9: mov    %edi,%eax
+  313cb: movzbl %al,%edi
+  313ce: mov    %edi,0x4(%esp)
+  313d2: call   31ce0 <inflateReset@plt+0xd390>
+  313d7: test   %eax,%eax
+  313d9: mov    %eax,%edi
+  313db: jne    31588 <inflateReset@plt+0xcc38>
+  313e1: mov    %esi,(%esp)
+  313e4: call   31c40 <inflateReset@plt+0xd2f0>
+  313e9: test   %eax,%eax
+  313eb: jne    31610 <inflateReset@plt+0xccc0>
+  313f1: call   31c80 <inflateReset@plt+0xd330>
+  313f6: cmp    %esi,%eax
+  313f8: jne    31550 <inflateReset@plt+0xcc00>
+  313fe: xchg   %ax,%ax
+  31400: call   2af00 <inflateReset@plt+0x65b0>
+  31405: mov    0x9c(%esp),%ecx
+  3140c: mov    %edi,%eax
+  3140e: mov    0x0(%ebp),%edx
+  31411: cmp    %edx,%ecx
+  31413: jne    3179d <inflateReset@plt+0xce4d>
+  31419: lea    0xac(%esp),%esp
+  31420: pop    %ebx
+  31421: pop    %esi
+  31422: pop    %edi
+  31423: pop    %ebp
+  31424: ret
+  31425: lea    0x0(%esi),%esi
+  31428: lea    -0x696d9(%ebx),%eax
+  3142e: lea    -0x683ec(%ebx),%edx ; "ro.frp.pst"
+  31434: mov    %eax,0x8(%esp)
+  31438: lea    0x40(%esp),%eax
+  3143c: mov    %edx,(%esp)
+  3143f: mov    %eax,0x4(%esp)
+  31443: mov    %edx,0x28(%esp)
+  31447: mov    %eax,0x2c(%esp)
+  3144b: call   24190 <property_get@plt>
+  31450: mov    0x28(%esp),%edx
+  31454: cmpb   $0x0,0x40(%esp)
+  31459: je     31688 <inflateReset@plt+0xcd38>
+  3145f: mov    0x2c(%esp),%eax
+  31463: movl   $0x0,0x4(%esp)
+  3146b: mov    %eax,(%esp)
+  3146e: call   23da0 <open@plt>
+  31473: mov    %eax,0x28(%esp)
+  31477: cmp    $0xffffffff,%eax
+  3147a: je     316c5 <inflateReset@plt+0xcd75>
+  31480: mov    0x28(%esp),%eax
+  31484: movl   $0x2,0x8(%esp)
+  3148c: movl   $0xffffffff,0x4(%esp)
+  31494: mov    %eax,(%esp)
+  31497: call   24060 <lseek@plt>
+  3149c: cmp    $0xffffffff,%eax
+  3149f: je     31731 <inflateReset@plt+0xcde1>
+  314a5: movl   $0x1,0x4(%esp)
+  314ad: movl   $0x69,(%esp)
+  314b4: call   10c940 <tee_policy_check@@Base>
+  314b9: test   %eax,%eax
+  314bb: je     31508 <inflateReset@plt+0xcbb8>
+  314bd: movl   $0x1,0x4(%esp)
+  314c5: movl   $0x6a,(%esp)
+  314cc: call   10c940 <tee_policy_check@@Base>
+  314d1: cmp    $0xcab13001,%eax
+  314d6: je     31629 <inflateReset@plt+0xccd9>
+  314dc: test   %eax,%eax
+  314de: je     315a0 <inflateReset@plt+0xcc50>
+  314e4: mov    0x28(%esp),%eax
+  314e8: mov    $0xffffffff,%edi
+  314ed: mov    %eax,(%esp)
+  314f0: call   23de0 <close@plt>
+  314f5: lea    -0x59f44(%ebx),%eax ; "The device class does not permit to unlock it."
+  314fb: mov    %eax,(%esp)
+  314fe: call   2cfb0 <inflateReset@plt+0x8660>
+  31503: jmp    31405 <inflateReset@plt+0xcab5>
+  31508: lea    -0x59fa4(%ebx),%eax ; "Unlock authorization check bypassed by policy."
+  3150e: mov    %eax,(%esp)
+  31511: call   2cfb0 <inflateReset@plt+0x8660>
+  31516: mov    0x28(%esp),%eax
+  3151a: mov    %eax,(%esp)
+  3151d: call   23de0 <close@plt>
+  31522: jmp    313c6 <inflateReset@plt+0xca76>
+  31527: nop
+  31528: lea    -0x683fb(%ebx),%eax ; "Nothing to do."
+  3152e: xor    %edi,%edi
+  31530: movl   $0x0,0x4(%esp)
+  31538: movl   $0x4,(%esp)
+  3153f: mov    %eax,0x8(%esp)
+  31543: call   23e00 <__android_log_print@plt>
+  31548: jmp    31405 <inflateReset@plt+0xcab5>
+  3154d: lea    0x0(%esi),%esi
+  31550: lea    -0x68309(%ebx),%eax ; "E:Failed to set device state"
+  31556: mov    %eax,(%esp)
+  31559: call   3a780 <inflateReset@plt+0x15e30>
+  3155e: lea    -0x682eb(%ebx),%eax ; "Failed to set device state"
+  31564: mov    %eax,0x8(%esp)
+  31568: mov    $0xffffffff,%edi
+  3156d: movl   $0x0,0x4(%esp)
+  31575: movl   $0x6,(%esp)
+  3157c: call   23e00 <__android_log_print@plt>
+  31581: jmp    31405 <inflateReset@plt+0xcab5>
+  31586: xchg   %ax,%ax
+  31588: lea    -0x68379(%ebx),%eax ; "E:couldn't get confirmation"
+  3158e: mov    %eax,(%esp)
+  31591: call   3a780 <inflateReset@plt+0x15e30>
+  31596: lea    -0x6835c(%ebx),%eax ; "couldn't get confirmation"
+  3159c: jmp    31564 <inflateReset@plt+0xcc14>
+  3159e: xchg   %ax,%ax
+  315a0: movl   $0x1,0x8(%esp)
+  315a8: lea    0x3f(%esp),%eax
+  315ac: mov    %eax,0x4(%esp)
+  315b0: mov    0x28(%esp),%eax
+  315b4: mov    %eax,(%esp)
+  315b7: call   24070 <read@plt>
+  315bc: cmp    $0xffffffff,%eax
+  315bf: je     31634 <inflateReset@plt+0xcce4>
+  315c1: mov    0x28(%esp),%eax
+  315c5: mov    %eax,(%esp)
+  315c8: call   23de0 <close@plt>
+  315cd: cmpb   $0x1,0x3f(%esp)
+  315d2: je     313c6 <inflateReset@plt+0xca76>
+  315d8: lea    -0x682cf(%ebx),%eax ; "Unlock command is protected."
+  315de: mov    $0xffffffff,%edi
+  315e3: mov    %eax,(%esp)
+  315e6: call   2cfb0 <inflateReset@plt+0x8660>
+  315eb: lea    -0x59eb8(%ebx),%eax ; "Go to Android OS to remove the protection"
+  315f1: mov    %eax,(%esp)
+  315f4: call   2cfb0 <inflateReset@plt+0x8660>
+  315f9: lea    -0x682b2(%ebx),%eax ; "Unlock not permitted"
+  315ff: mov    %eax,(%esp)
+  31602: call   2d110 <inflateReset@plt+0x87c0>
+  31607: jmp    31405 <inflateReset@plt+0xcab5>
+  3160c: lea    0x0(%esi,%eiz,1),%esi
+  31610: lea    -0x68341(%ebx),%eax ; "E:Couldn't set device state"
+  31616: mov    %eax,(%esp)
+  31619: call   3a780 <inflateReset@plt+0x15e30>
+  3161e: lea    -0x68324(%ebx),%eax ; "Couldn't set device state"
+  31624: jmp    31564 <inflateReset@plt+0xcc14>
+  31629: lea    -0x59f74(%ebx),%eax ; "No tee-policy defined yet. Allow as work-around"
+  3162f: jmp    3150e <inflateReset@plt+0xcbbe>
+  31634: call   23e80 <__errno@plt>
+  31639: mov    %eax,%esi
+  3163b: mov    (%eax),%eax
+  3163d: mov    %eax,(%esp)
+  31640: call   23e90 <strerror@plt>
+  31645: mov    %eax,0x4(%esp)
+  31649: lea    -0x59f14(%ebx),%eax ; "E:Failed to read oem unlock enabled byte: %s"
+  3164f: mov    %eax,(%esp)
+  31652: call   3a780 <inflateReset@plt+0x15e30>
+  31657: mov    (%esi),%eax
+  31659: mov    %eax,(%esp)
+  3165c: call   23e90 <strerror@plt>
+  31661: mov    %eax,0xc(%esp)
+  31665: lea    -0x59ee4(%ebx),%eax ; "Failed to read oem unlock enabled byte: %s"
+  3166b: movl   $0x0,0x4(%esp)
+  31673: movl   $0x6,(%esp)
+  3167a: mov    %eax,0x8(%esp)
+  3167e: call   23e00 <__android_log_print@plt>
+  31683: jmp    315d8 <inflateReset@plt+0xcc88>
+  31688: mov    %edx,0x4(%esp)
+  3168c: lea    -0x683e1(%ebx),%eax ; "E:Failed to get property %s"
+  31692: mov    %eax,(%esp)
+  31695: call   3a780 <inflateReset@plt+0x15e30>
+  3169a: mov    0x28(%esp),%edx
+  3169e: lea    -0x683c4(%ebx),%eax ; "Failed to get property %s"
+  316a4: movl   $0x0,0x4(%esp)
+  316ac: movl   $0x6,(%esp)
+  316b3: mov    %edx,0xc(%esp)
+  316b7: mov    %eax,0x8(%esp)
+  316bb: call   23e00 <__android_log_print@plt>
+  316c0: jmp    313c6 <inflateReset@plt+0xca76>
+  316c5: call   23e80 <__errno@plt>
+  316ca: mov    %eax,%edx
+  316cc: mov    (%eax),%eax
+  316ce: mov    %edx,0x28(%esp)
+  316d2: mov    %eax,(%esp)
+  316d5: call   23e90 <strerror@plt>
+  316da: mov    %eax,0x8(%esp)
+  316de: mov    0x2c(%esp),%eax
+  316e2: mov    %eax,0x4(%esp)
+  316e6: lea    -0x683a9(%ebx),%eax ; "E:Failed to open %s: %s"
+  316ec: mov    %eax,(%esp)
+  316ef: call   3a780 <inflateReset@plt+0x15e30>
+  316f4: mov    0x28(%esp),%edx
+  316f8: mov    (%edx),%eax
+  316fa: mov    %eax,(%esp)
+  316fd: call   23e90 <strerror@plt>
+  31702: mov    %eax,0x10(%esp)
+  31706: mov    0x2c(%esp),%eax
+  3170a: movl   $0x0,0x4(%esp)
+  31712: movl   $0x6,(%esp)
+  31719: mov    %eax,0xc(%esp)
+  3171d: lea    -0x68390(%ebx),%eax ; "Failed to open %s: %s"
+  31723: mov    %eax,0x8(%esp)
+  31727: call   23e00 <__android_log_print@plt>
+  3172c: jmp    313c6 <inflateReset@plt+0xca76>
+  31731: call   23e80 <__errno@plt>
+  31736: mov    %eax,%edx
+  31738: mov    (%eax),%eax
+  3173a: mov    %edx,0x28(%esp)
+  3173e: mov    %eax,(%esp)
+  31741: call   23e90 <strerror@plt>
+  31746: mov    %eax,0x8(%esp)
+  3174a: mov    0x2c(%esp),%eax
+  3174e: mov    %eax,0x4(%esp)
+  31752: lea    -0x59fec(%ebx),%eax ; "E:Failed to seek to end of %s: %s"
+  31758: mov    %eax,(%esp)
+  3175b: call   3a780 <inflateReset@plt+0x15e30>
+  31760: mov    0x28(%esp),%edx
+  31764: mov    (%edx),%eax
+  31766: mov    %eax,(%esp)
+  31769: call   23e90 <strerror@plt>
+  3176e: mov    %eax,0x10(%esp)
+  31772: mov    0x2c(%esp),%eax
+  31776: movl   $0x0,0x4(%esp)
+  3177e: movl   $0x6,(%esp)
+  31785: mov    %eax,0xc(%esp)
+  31789: lea    -0x59fc8(%ebx),%eax ; "Failed to seek to end of %s: %s"
+  3178f: mov    %eax,0x8(%esp)
+  31793: call   23e00 <__android_log_print@plt>
+  31798: jmp    313c6 <inflateReset@plt+0xca76>
+  3179d: call   2518d <inflateReset@plt+0x83d>
+  317a2: lea    0x0(%esi,%eiz,1),%esi
+  317a9: lea    0x0(%edi,%eiz,1),%edi

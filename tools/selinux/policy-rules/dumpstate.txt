@@ -1,0 +1,362 @@
+
+== allow binder
+   appdomain                                  call transfer
+   binderservicedomain                        call transfer
+   servicemanager                             call transfer
+   surfaceflinger                             transfer
+   system_server                              transfer
+
+== allow capability
+   dumpstate                                  chown dac_override fowner fsetid kill net_raw setgid setuid sys_admin sys_ptrace sys_resource
+
+== allow capability2
+   dumpstate                                  syslog
+
+== allow chr_file
+   alarm_device                               getattr ioctl lock open read
+   ashmem_device                              append execute getattr ioctl lock open read write
+   binder_device                              append getattr ioctl lock open read write
+   devpts                                     append getattr ioctl lock open read write
+   gpu_device                                 append getattr ioctl lock open read write
+   ion_device                                 append getattr ioctl lock open read write
+   kmsg_device                                append open write
+   log_device                                 append getattr ioctl lock open read write
+   null_device                                append getattr ioctl lock open read write
+   owntty_device                              append getattr ioctl lock open read write
+   pmsg_device                                append open write
+   ptmx_device                                append getattr ioctl lock open read write
+   random_device                              append getattr ioctl lock open read write
+   urandom_device                             append getattr ioctl lock open read write
+   zero_device                                append getattr ioctl lock open read write
+
+== allow debuggerd
+   drmserver                                  dump_backtrace
+   mediaserver                                dump_backtrace
+   sdcardd                                    dump_backtrace
+   surfaceflinger                             dump_backtrace
+
+== allow dir
+   adb_data_file                              getattr open read
+   anr_data_file                              add_name create getattr ioctl open read relabelto remove_name rename reparent rmdir search setattr write
+   apk_data_file                              getattr search
+   asec_apk_file                              getattr ioctl open read search
+   asec_public_file                           getattr ioctl open read search
+   bluetooth_data_file                        add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   cache_file                                 add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   cgroup                                     getattr ioctl open read search write
+   dalvikcache_data_file                      getattr search
+   debugfs                                    getattr ioctl open read search
+   device                                     search
+   devpts                                     search
+   domain                                     getattr ioctl open read search
+   dumpstate                                  getattr ioctl open read search
+   fs_type                                    getattr
+   gps_data_file                              search
+   graphics_device                            search
+   inotify                                    getattr ioctl open read search
+   log_device                                 search
+   log_file                                   add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   logtoold_data_file                         add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   mnt_user_file                              search
+   net_data_file                              search
+   proc                                       getattr ioctl open read search
+   proc_net                                   getattr ioctl open read search
+   pstorefs                                   getattr ioctl open read search
+   rootfs                                     getattr ioctl open read search
+   sdcard_internal                            add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   security_file                              getattr search
+   selinuxfs                                  getattr ioctl open read search
+   shell_data_file                            add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   socket_device                              getattr ioctl open read search
+   storage_file                               search
+   sysfs                                      getattr ioctl open read search
+   sysfs_devices_system_cpu                   getattr ioctl open read search
+   system_app_data_file                       add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   system_data_file                           add_name create getattr ioctl open read relabelfrom remove_name rename reparent rmdir search setattr write
+   system_file                                getattr ioctl open read search
+   tmpfs                                      getattr ioctl open read search
+   tombstone_data_file                        add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   wifi_data_file                             add_name create getattr ioctl open read remove_name rename reparent rmdir search setattr write
+   zoneinfo_data_file                         getattr ioctl open read search
+
+== allow fd
+   adbd                                       use
+   appdomain                                  use
+   binderservicedomain                        use
+   dumpstate                                  use
+   init                                       use
+   kernel                                     use
+   system_server                              use
+
+== allow fifo_file
+   dumpstate                                  append getattr ioctl lock open read write
+   surfaceflinger                             read write
+
+== allow file
+   anr_data_file                              append create getattr ioctl lock open read rename setattr unlink write
+   apk_data_file                              getattr ioctl lock open read
+   asec_public_file                           getattr ioctl lock open read
+   bluetooth_data_file                        append create getattr ioctl lock open read rename setattr unlink write
+   cache_file                                 append create getattr ioctl lock open read rename setattr unlink write
+   cgroup                                     append getattr ioctl lock open read write
+   dalvikcache_data_file                      execute getattr ioctl lock open read
+   debugfs                                    append getattr ioctl lock open read write
+   device                                     read
+   domain                                     getattr ioctl lock open read
+   dumpstate                                  append getattr ioctl lock open read write
+   dumpstate_exec                             entrypoint execute execute_no_trans getattr open read
+   dumpstate_tmpfs                            execute read write
+   inotify                                    getattr ioctl lock open read
+   log_file                                   append create getattr ioctl lock open read rename setattr unlink write
+   logcat_exec                                entrypoint execute execute_no_trans getattr ioctl lock open read
+   logtoold_data_file                         append create getattr ioctl lock open read rename setattr unlink write
+   logtoold_exec                              execute execute_no_trans getattr open read
+   net_data_file                              getattr ioctl lock open read
+   proc                                       getattr ioctl lock open read
+   proc_cpuinfo                               getattr ioctl lock mounton open read
+   proc_net                                   getattr ioctl lock open read
+   procrank_exec                              execute execute_no_trans open read
+   properties_device                          getattr ioctl lock open read
+   pstorefs                                   getattr ioctl lock open read
+   qtaguid_proc                               getattr ioctl lock open read
+   rootfs                                     getattr ioctl lock open read
+   sdcard_internal                            append create getattr ioctl lock open read rename setattr unlink write
+   security_file                              getattr
+   selinuxfs                                  getattr ioctl lock open read
+   shell_data_file                            append create getattr ioctl lock open read rename setattr unlink write
+   shell_exec                                 entrypoint execute execute_no_trans getattr ioctl lock open read
+   sysfs                                      append getattr ioctl lock open read write
+   sysfs_devices_system_cpu                   getattr ioctl lock open read
+   system_app_data_file                       execute execute_no_trans getattr ioctl lock open read setattr
+   system_data_file                           getattr ioctl lock open read
+   system_file                                execute execute_no_trans getattr ioctl lock open read
+   tmpfs                                      getattr read
+   tombstone_data_file                        append create getattr ioctl lock open read rename setattr unlink write
+   toolbox_exec                               execute execute_no_trans getattr ioctl lock open read
+   vdc_exec                                   execute getattr open read
+   wifi_data_file                             append create getattr ioctl lock open read rename setattr unlink write
+   zoneinfo_data_file                         getattr ioctl lock open read
+   zygote_exec                                execute execute_no_trans getattr ioctl lock open read
+
+== allow filesystem
+   config_file                                getattr
+   factory_file                               getattr
+   fs_type                                    getattr
+   log_file                                   getattr
+
+== allow key
+   init                                       search
+   vold                                       search
+
+== allow lnk_file
+   apk_data_file                              getattr ioctl lock open read
+   cache_file                                 getattr ioctl lock open read
+   cgroup                                     getattr ioctl lock open read
+   dalvikcache_data_file                      getattr ioctl lock open read
+   dev_type                                   getattr ioctl lock open read
+   domain                                     getattr ioctl lock open read
+   dumpstate                                  getattr ioctl lock open read
+   inotify                                    getattr ioctl lock open read
+   mnt_user_file                              read
+   proc                                       getattr ioctl lock open read
+   proc_net                                   getattr ioctl lock open read
+   rootfs                                     getattr ioctl lock open read
+   security_file                              getattr ioctl lock open read
+   storage_file                               read
+   sysfs                                      getattr ioctl lock open read
+   sysfs_devices_system_cpu                   getattr ioctl lock open read
+   system_app_data_file                       append create execute getattr ioctl lock open read rename setattr unlink write
+   system_data_file                           getattr ioctl lock open read
+   system_file                                getattr ioctl lock open read
+   tmpfs                                      getattr read
+   zoneinfo_data_file                         getattr ioctl lock open read
+
+== allow netlink_route_socket
+   dumpstate                                  append bind connect create getattr getopt lock nlmsg_read read setattr setopt shutdown write
+
+== allow packet_socket
+   dumpstate                                  append bind connect create getattr getopt ioctl lock read setattr setopt shutdown write
+
+== allow process
+   appdomain                                  signal
+   debuggerd                                  sigchld
+   domain                                     getattr
+   drmserver                                  signal
+   dumpstate                                  execmem fork getattr getcap getpgid getsched getsession setcap setpgid setrlimit setsched sigchld sigkill signal signull sigstop
+   init                                       sigchld
+   mediaserver                                signal
+   sdcardd                                    signal
+   surfaceflinger                             signal
+   system_server                              signal
+   vdc                                        rlimitinh siginh transition
+
+== allow property_service
+   ctl_default_prop                           set
+   logtool_prop                               set
+   system_prop                                set
+
+== allow rawip_socket
+   dumpstate                                  append bind connect create getattr getopt ioctl lock read setattr setopt shutdown write
+
+== allow service_manager
+   DockObserver_service                       find
+   IProxyService_service                      find
+   ISEP_service                               find
+   accessibility_service                      find
+   account_service                            find
+   activity_service                           find
+   alarm_service                              find
+   appops_service                             find
+   appwidget_service                          find
+   assetatlas_service                         find
+   audio_service                              find
+   aware_service                              find
+   backup_service                             find
+   battery_service                            find
+   batterystats_service                       find
+   bluetooth_manager_service                  find
+   bluetooth_service                          find
+   cameraproxy_service                        find
+   clipboard_service                          find
+   commontime_management_service              find
+   connectivity_service                       find
+   consumer_ir_service                        find
+   content_service                            find
+   country_detector_service                   find
+   cpuinfo_service                            find
+   cta_service                                find
+   cws_service                                find
+   dbinfo_service                             find
+   default_android_service                    find
+   device_policy_service                      find
+   deviceidle_service                         find
+   devicestoragemonitor_service               find
+   diskstats_service                          find
+   display_service                            find
+   dreams_service                             find
+   drmserver_service                          find
+   dropbox_service                            find
+   dtshpxservice_service                      find
+   ethernet_service                           find
+   fingerprint_service                        find
+   fingerprintd_service                       find
+   gfxinfo_service                            find
+   graphicsstats_service                      find
+   hardware_service                           find
+   hdmi_control_service                       find
+   healthd_service                            find
+   imms_service                               find
+   input_method_service                       find
+   input_service                              find
+   inputflinger_service                       find
+   jobscheduler_service                       find
+   keystore_service                           find
+   launcherapps_service                       find
+   location_service                           find
+   lock_settings_service                      find
+   media_projection_service                   find
+   media_router_service                       find
+   media_session_service                      find
+   mediaserver_service                        find
+   meminfo_service                            find
+   midi_service                               find
+   mount_service                              find
+   netpolicy_service                          find
+   netstats_service                           find
+   network_management_service                 find
+   network_score_service                      find
+   nfc_service                                find
+   notification_service                       find
+   package_service                            find
+   permission_service                         find
+   persistent_data_block_service              find
+   power_service                              find
+   print_service                              find
+   processinfo_service                        find
+   procstats_service                          find
+   radio_service                              find
+   registry_service                           find
+   restrictions_service                       find
+   rttmanager_service                         find
+   samplingprofiler_service                   find
+   scheduling_policy_service                  find
+   search_service                             find
+   securityfile_service                       find
+   securitymanager_service                    find
+   sensorservice_service                      find
+   serial_service                             find
+   servicediscovery_service                   find
+   servicemanager                             list
+   statusbar_service                          find
+   surfaceflinger_service                     find
+   system_app_service                         find
+   task_service                               find
+   telecom_service                            find
+   textservices_service                       find
+   themes_service                             find
+   timeout_service                            find
+   trust_service                              find
+   tv_input_service                           find
+   uimode_service                             find
+   updatelock_service                         find
+   usagestats_service                         find
+   usb_service                                find
+   user_service                               find
+   vibrator_service                           find
+   voiceinteraction_service                   find
+   wallpaper_service                          find
+   webviewupdate_service                      find
+   wifi_service                               find
+   wifip2p_service                            find
+   wifiscanner_service                        find
+   window_service                             find
+
+== allow sock_file
+   dnsproxyd_socket                           write
+   fwmarkd_socket                             write
+   logd_socket                                write
+   logdr_socket                               write
+   logdw_socket                               write
+   mdnsd_socket                               write
+   property_socket                            write
+
+== allow system
+   kernel                                     module_request syslog_mod syslog_read
+
+== allow tcp_socket
+   dumpstate                                  accept append bind connect create getattr getopt ioctl listen lock read setattr setopt shutdown write
+   node_type                                  node_bind
+   port_type                                  name_bind name_connect
+
+== allow udp_socket
+   dumpstate                                  append bind connect create getattr getopt ioctl lock read setattr setopt shutdown write
+   node_type                                  node_bind
+   port_type                                  name_bind
+
+== allow unix_dgram_socket
+   dumpstate                                  append bind connect create getattr getopt ioctl lock read sendto setattr setopt shutdown write
+   logd                                       sendto
+
+== allow unix_stream_socket
+   adbd                                       connectto getattr getopt read shutdown write
+   debuggerd                                  connectto
+   dumpstate                                  accept append bind connect connectto create getattr getopt ioctl listen lock read setattr setopt shutdown write
+   init                                       connectto
+   logd                                       connectto
+   mdnsd                                      connectto
+   netd                                       connectto
+
+== allow ioctl-opnum unix_dgram_socket
+   domain                                     ioctl magic=0x54 nr={0x1 0x11 0x13 0x14 0x1b 0x51}]
+
+== allow ioctl-opnum unix_stream_socket
+   domain                                     ioctl magic=0x54 nr={0x1 0x11 0x13 0x14 0x1b 0x51}]
+
+== auditdeny/dontaudit process
+   vdc                                        <perm31> <perm32> dyntransition execheap execmem execstack fork getattr getcap getpgid getsched getsession ptrace rlimitinh setcap setcurrent setexec setfscreate setkeycreate setpgid setrlimit setsched setsockcreate share sigchld siginh sigkill signal signull sigstop transition
+
+== typetransition file
+   tmpfs                                      -> dumpstate_tmpfs
+
+== typetransition process
+   vdc_exec                                   -> vdc

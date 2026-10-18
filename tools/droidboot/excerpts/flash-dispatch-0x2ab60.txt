@@ -1,0 +1,219 @@
+===== func 0x2ab60 .. 0x2af00 =====
+F 2ab60: push   %ebp
+  2ab61: push   %edi
+  2ab62: push   %esi
+  2ab63: push   %ebx
+  2ab64: call   251ac <inflateReset@plt+0x85c>
+  2ab69: add    $0x183183,%ebx
+  2ab6f: lea    -0x6c(%esp),%esp
+  2ab73: mov    0x84(%esp),%eax
+  2ab7a: mov    0x80(%esp),%ebp
+  2ab81: mov    %eax,0x1c(%esp)
+  2ab85: mov    -0x40(%ebx),%eax
+  2ab8b: mov    (%eax),%eax
+  2ab8d: mov    %eax,0x5c(%esp)
+  2ab91: call   31170 <inflateReset@plt+0xc820>
+  2ab96: test   %eax,%eax
+  2ab98: jne    2abaf <inflateReset@plt+0x625f>
+  2ab9a: mov    $0x5,%ecx
+  2ab9f: lea    -0x698ab(%ebx),%edi ; "misc"
+  2aba5: mov    %ebp,%esi
+  2aba7: repz cmpsb %es:(%edi),%ds:(%esi)
+  2aba9: je     2adc8 <inflateReset@plt+0x6478>
+  2abaf: mov    %ebp,0x4(%esp)
+  2abb3: lea    -0x68f6f(%ebx),%eax ; "FLASH %s..."
+  2abb9: mov    %eax,(%esp)
+  2abbc: call   3a780 <inflateReset@plt+0x15e30>
+  2abc1: call   31150 <inflateReset@plt+0xc800>
+  2abc6: mov    %ebp,0x4(%esp)
+  2abca: mov    %eax,%edi
+  2abcc: lea    0x8ab0(%ebx),%eax
+  2abd2: mov    (%eax),%eax
+  2abd4: mov    %eax,(%esp)
+  2abd7: call   240f0 <hashmapGet@plt>
+  2abdc: test   %eax,%eax
+  2abde: mov    %eax,%esi
+  2abe0: je     2ace0 <inflateReset@plt+0x6390>
+  2abe6: mov    0x1214(%ebx),%eax
+  2abec: mov    %eax,0x4(%esp)
+  2abf0: lea    -0x68f62(%ebx),%eax ; "asus_internal_unlock %d"
+  2abf6: mov    %eax,(%esp)
+  2abf9: call   3a780 <inflateReset@plt+0x15e30>
+  2abfe: cmp    0x4(%esi),%edi
+  2ac01: jae    2ac11 <inflateReset@plt+0x62c1>
+  2ac03: mov    0x1214(%ebx),%edx
+  2ac09: test   %edx,%edx
+  2ac0b: je     2adef <inflateReset@plt+0x649f>
+  2ac11: mov    0x88(%esp),%eax
+  2ac18: mov    %eax,0x4(%esp)
+  2ac1c: mov    0x1c(%esp),%eax
+  2ac20: mov    %eax,(%esp)
+  2ac23: call   *(%esi)
+  2ac25: test   %eax,%eax
+  2ac27: jne    2ac88 <inflateReset@plt+0x6338>
+  2ac29: lea    -0x68ee8(%ebx),%eax ; "FLASH COMPLETE!"
+  2ac2f: mov    %eax,(%esp)
+  2ac32: call   3a780 <inflateReset@plt+0x15e30>
+  2ac37: lea    -0x696d9(%ebx),%eax
+  2ac3d: mov    %eax,(%esp)
+  2ac40: call   2e3f0 <inflateReset@plt+0x9aa0>
+  2ac45: call   31170 <inflateReset@plt+0xc820>
+  2ac4a: test   %eax,%eax
+  2ac4c: jne    2ac5f <inflateReset@plt+0x630f>
+  2ac4e: mov    $0x5,%ecx
+  2ac53: lea    -0x698ab(%ebx),%edi ; "misc"
+  2ac59: mov    %ebp,%esi
+  2ac5b: repz cmpsb %es:(%edi),%ds:(%esi)
+  2ac5d: je     2ac80 <inflateReset@plt+0x6330>
+  2ac5f: mov    -0x40(%ebx),%eax
+  2ac65: mov    0x5c(%esp),%edx
+  2ac69: mov    (%eax),%eax
+  2ac6b: cmp    %eax,%edx
+  2ac6d: jne    2aeef <inflateReset@plt+0x659f>
+  2ac73: lea    0x6c(%esp),%esp
+  2ac77: pop    %ebx
+  2ac78: pop    %esi
+  2ac79: pop    %edi
+  2ac7a: pop    %ebp
+  2ac7b: ret
+  2ac7c: lea    0x0(%esi,%eiz,1),%esi
+  2ac80: call   120d90 <error@@Base+0x4fa0>
+  2ac85: jmp    2ac5f <inflateReset@plt+0x630f>
+  2ac87: nop
+  2ac88: mov    %ebp,0x4(%esp)
+  2ac8c: lea    -0x68f49(%ebx),%eax ; "E:%s flash failed!"
+  2ac92: mov    %eax,(%esp)
+  2ac95: call   3a780 <inflateReset@plt+0x15e30>
+  2ac9a: mov    %ebp,0xc(%esp)
+  2ac9e: lea    -0x68f35(%ebx),%eax ; "%s flash failed!"
+  2aca4: movl   $0x0,0x4(%esp)
+  2acac: movl   $0x6,(%esp)
+  2acb3: mov    %eax,0x8(%esp)
+  2acb7: call   23e00 <__android_log_print@plt>
+  2acbc: lea    -0x68ed7(%ebx),%eax ; "FLASH FAILED!"
+  2acc2: mov    %eax,(%esp)
+  2acc5: call   3a780 <inflateReset@plt+0x15e30>
+  2acca: lea    -0x68ec8(%ebx),%eax ; "flash_cmds error!"
+  2acd0: mov    %eax,(%esp)
+  2acd3: call   2d110 <inflateReset@plt+0x87c0>
+  2acd8: jmp    2ac45 <inflateReset@plt+0x62f5>
+  2acdd: lea    0x0(%esi),%esi
+  2ace0: test   %edi,%edi
+  2ace2: jne    2acf2 <inflateReset@plt+0x63a2>
+  2ace4: mov    0x1214(%ebx),%eax
+  2acea: test   %eax,%eax
+  2acec: je     2aea3 <inflateReset@plt+0x6553>
+  2acf2: lea    0x8abc(%ebx),%eax
+  2acf8: mov    %ebp,0x4(%esp)
+  2acfc: mov    (%eax),%eax
+  2acfe: mov    %eax,(%esp)
+  2ad01: call   24110 <hashmapContainsKey@plt>
+  2ad06: test   %al,%al
+  2ad08: je     2ae90 <inflateReset@plt+0x6540>
+  2ad0e: test   %ebp,%ebp
+  2ad10: je     2aeb6 <inflateReset@plt+0x6566>
+  2ad16: mov    $0x9,%ecx
+  2ad1b: lea    -0x69abe(%ebx),%edi ; "userdata"
+  2ad21: mov    %ebp,%esi
+  2ad23: repz cmpsb %es:(%edi),%ds:(%esi)
+  2ad25: je     2ade0 <inflateReset@plt+0x6490>
+  2ad2b: mov    %ebp,0xc(%esp)
+  2ad2f: lea    -0x6991d(%ebx),%eax
+  2ad35: lea    0x2a(%esp),%esi
+  2ad39: movl   $0x32,0x4(%esp)
+  2ad41: mov    %eax,0x8(%esp)
+  2ad45: mov    %esi,(%esp)
+  2ad48: call   23f90 <snprintf@plt>
+  2ad4d: mov    %esi,(%esp)
+  2ad50: call   258d0 <inflateReset@plt+0xf80>
+  2ad55: test   %eax,%eax
+  2ad57: mov    %eax,%edi
+  2ad59: je     2aeb6 <inflateReset@plt+0x6566>
+  2ad5f: mov    0x8(%eax),%eax
+  2ad62: movl   $0x32,0x4(%esp)
+  2ad6a: mov    %esi,(%esp)
+  2ad6d: mov    %eax,0xc(%esp)
+  2ad71: lea    -0x68eb5(%ebx),%eax
+  2ad77: mov    %eax,0x8(%esp)
+  2ad7b: call   23f90 <snprintf@plt>
+  2ad80: mov    0x1c(%esp),%eax
+  2ad84: cmpl   $0xed26ff3a,(%eax)
+  2ad8a: je     2ae08 <inflateReset@plt+0x64b8>
+  2ad8c: mov    0x88(%esp),%eax
+  2ad93: mov    %esi,(%esp)
+  2ad96: mov    %eax,0x8(%esp)
+  2ad9a: mov    0x1c(%esp),%eax
+  2ad9e: mov    %eax,0x4(%esp)
+  2ada2: call   30470 <inflateReset@plt+0xbb20>
+  2ada7: test   %eax,%eax
+  2ada9: mov    %eax,%edi
+  2adab: js     2ae50 <inflateReset@plt+0x6500>
+  2adb1: call   24020 <sync@plt>
+  2adb6: test   %edi,%edi
+  2adb8: jne    2acbc <inflateReset@plt+0x636c>
+  2adbe: xchg   %ax,%ax
+  2adc0: jmp    2ac29 <inflateReset@plt+0x62d9>
+  2adc5: lea    0x0(%esi),%esi
+  2adc8: nop
+  2adc9: lea    0x0(%esi,%eiz,1),%esi
+  2add0: call   120d60 <error@@Base+0x4f70>
+  2add5: jmp    2abaf <inflateReset@plt+0x625f>
+  2adda: lea    0x0(%esi),%esi
+  2ade0: lea    -0x69739(%ebx),%eax ; "data"
+  2ade6: mov    %eax,0xc(%esp)
+  2adea: jmp    2ad2f <inflateReset@plt+0x63df>
+  2adef: lea    -0x5adb8(%ebx),%eax ; "command not allowed in this device state"
+  2adf5: mov    %eax,(%esp)
+  2adf8: call   2d110 <inflateReset@plt+0x87c0>
+  2adfd: jmp    2acbc <inflateReset@plt+0x636c>
+  2ae02: lea    0x0(%esi),%esi
+  2ae08: movl   $0x0,0x4(%esp)
+  2ae10: lea    -0x5aab0(%ebx),%eax ; "sparse image data detected flash sparse package on device"
+  2ae16: movl   $0x4,(%esp)
+  2ae1d: mov    %eax,0x8(%esp)
+  2ae21: call   23e00 <__android_log_print@plt>
+  2ae26: mov    0x88(%esp),%eax
+  2ae2d: mov    %eax,0x8(%esp)
+  2ae31: mov    0x1c(%esp),%eax
+  2ae35: mov    %eax,0x4(%esp)
+  2ae39: mov    0x8(%edi),%eax
+  2ae3c: mov    %eax,(%esp)
+  2ae3f: call   306a0 <inflateReset@plt+0xbd50>
+  2ae44: mov    %eax,%edi
+  2ae46: jmp    2adb1 <inflateReset@plt+0x6461>
+  2ae4b: nop
+  2ae4c: lea    0x0(%esi,%eiz,1),%esi
+  2ae50: mov    %esi,0x4(%esp)
+  2ae54: lea    -0x5aa74(%ebx),%eax ; "E:Can't write data to target %s!"
+  2ae5a: mov    %eax,(%esp)
+  2ae5d: call   3a780 <inflateReset@plt+0x15e30>
+  2ae62: mov    %esi,0xc(%esp)
+  2ae66: lea    -0x5aa50(%ebx),%eax ; "Can't write data to target %s!"
+  2ae6c: movl   $0x0,0x4(%esp)
+  2ae74: movl   $0x6,(%esp)
+  2ae7b: mov    %eax,0x8(%esp)
+  2ae7f: call   23e00 <__android_log_print@plt>
+  2ae84: jmp    2acbc <inflateReset@plt+0x636c>
+  2ae89: lea    0x0(%esi,%eiz,1),%esi
+  2ae90: lea    -0x5aaf4(%ebx),%eax ; "not allowed to flash this partition"
+  2ae96: mov    %eax,(%esp)
+  2ae99: call   2d110 <inflateReset@plt+0x87c0>
+  2ae9e: jmp    2acbc <inflateReset@plt+0x636c>
+  2aea3: lea    -0x68f23(%ebx),%eax ; "Bootloader must not be locked"
+  2aea9: mov    %eax,(%esp)
+  2aeac: call   2d110 <inflateReset@plt+0x87c0>
+  2aeb1: jmp    2acbc <inflateReset@plt+0x636c>
+  2aeb6: mov    %ebp,0x4(%esp)
+  2aeba: lea    -0x5aad0(%ebx),%eax ; "E:unknown volume %s to flash!"
+  2aec0: mov    %eax,(%esp)
+  2aec3: call   3a780 <inflateReset@plt+0x15e30>
+  2aec8: mov    %ebp,0xc(%esp)
+  2aecc: lea    -0x68f05(%ebx),%eax ; "unknown volume %s to flash!"
+  2aed2: movl   $0x0,0x4(%esp)
+  2aeda: movl   $0x6,(%esp)
+  2aee1: mov    %eax,0x8(%esp)
+  2aee5: call   23e00 <__android_log_print@plt>
+  2aeea: jmp    2acbc <inflateReset@plt+0x636c>
+  2aeef: call   2518d <inflateReset@plt+0x83d>
+  2aef4: lea    0x0(%esi),%esi
+  2aefa: lea    0x0(%edi),%edi
